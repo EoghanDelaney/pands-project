@@ -13,11 +13,11 @@ def print_content():
     print(df.dtypes)
     print("***** Data Total Describe *****")
     print(df.describe())
-    print("***** Setosa Describe *****")
+    print("***** Describe  Setosa *****")
     print(df[df.species == 'setosa'].describe())
-    print("***** Versicolor Describe *****")
+    print("***** Describe Versicolor *****")
     print(df[df.species == 'versicolor'].describe())
-    print("***** Virginica Describe *****")
+    print("*****  Describe Virginica *****")
     print(df[df.species == 'virginica'].describe())
 
 
