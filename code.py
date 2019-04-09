@@ -21,10 +21,24 @@ def print_content():
     print(df[df.species == 'virginica'].describe())
 
 
+def sep_width_length():
+    sns.FacetGrid(df, hue="species", height=5)\
+    .map(plt.scatter, "sepal_length", "sepal_width")\
+    .add_legend()
+
+def pet_width_length():
+    sns.FacetGrid(df, hue="species", height=5)\
+    .map(plt.scatter, "petal_length", "petal_width")\
+    .add_legend()
+
 def plotGraph():
     sns.pairplot(df, hue='species')
-    plt.show()
-    
+
+
+
 
 print_content()
+sep_width_length()
+pet_width_length()
 plotGraph()
+plt.show()

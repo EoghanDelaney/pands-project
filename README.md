@@ -2,9 +2,9 @@
 To be entered here
 
 ## Background
-Iris dataset 
+Iris dataset.
 
-## What is sepal, petal ect
+## What is sepal, petal ect.
 Description of the flower
 
 ## Inital data review
@@ -13,5 +13,8 @@ Description of the flower
 
 ## What the files contain
 
-## Data Visualisation
+## Data Visualization
 
+## Findings
+
+## References
