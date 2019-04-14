@@ -12,10 +12,17 @@ As part of Fisher’s investigation he measured, documented and logged 150 Iris 
 https://www.math.umd.edu/~petersd/666/html/iris_pca.html
 
 The dataset consists of five number columns, four of which are dimensions (in centimetres) – Sepal Length, Sepal Width, Petal Length & Petal Width. The final column is the species of iris flower. There are 150 samples taken, 50 number for each species/class. 
-## What is sepal, petal ect.
-Description of the flower
-
 ## Inital data review
+I order to review the data we first import it into python, we do this by applying the following code
+
+''' import pandas as pd     # We import pandas as pd to reduce the size of the code
+    file = 'iris.csv'       # Declare a variable called file 
+    df = pd.read_csv(file)  # We import the file and label it df
+    df.head()               # This will output the top five rows of the above imported csv
+'''
+The above code can can provide us with a snipet of the data and provide the following output.
+
+![Output the data head](images/data_head.PNG)
 
 ## How to run the code
 
