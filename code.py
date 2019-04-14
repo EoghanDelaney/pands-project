@@ -20,25 +20,62 @@ def print_content():
     print("*****  Describe Virginica *****")
     print(df[df.species == 'virginica'].describe())
 
+#################
+#def labelPlot(title):
+   # heading = lm.fig.suptitle(title, fontsize=12)
+  #  plt.show()
+
+
+#################
+
+def petalLength():
+    sns.swarmplot(x="species", y="petal_length", data=df)
+    plt.show()
+
+def petalWidth():
+    sns.swarmplot(x="species", y="petal_width", data=df)
+    plt.show()
+
+def sepalLength():
+    sns.swarmplot(x="species", y="sepal_length", data=df)
+    plt.show()
+
+def sepalWidth():
+    sns.swarmplot(x="species", y="sepal_width", data=df)
+    plt.show()
+
+################
 
 def sep_width_length():
     sns.FacetGrid(df, hue="species", height=5)\
     .map(plt.scatter, "sepal_length", "sepal_width")\
     .add_legend()
+    plt.show()
 
 def pet_width_length():
     sns.FacetGrid(df, hue="species", height=5)\
     .map(plt.scatter, "petal_length", "petal_width")\
     .add_legend()
+    plt.show()
 
 def plotGraph():
-    sns.pairplot(df, hue='species')
+    sns.pairplot(df, hue='species')\
+    .add_legend()
+    plt.show()
 
-
+###################
 
 
 print_content()
+
+
+petalLength()
+petalWidth()
+sepalLength()
+sepalWidth()
+
 sep_width_length()
 pet_width_length()
+
 plotGraph()
-plt.show()
+
