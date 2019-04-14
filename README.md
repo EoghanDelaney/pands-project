@@ -6,6 +6,7 @@ The aim of this report is to determine if the physical characteristics of the ir
 ## Investigation
 Using google a number of different iterations of the data set can found and the following CSV file was used in this project (INPUT CSV FILE).
 As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image illustrating the sepal and petal element of the iris flower.
+
 ![Image of an Iris](images/iris_with_labels.jpg)
 
 https://www.math.umd.edu/~petersd/666/html/iris_pca.html
@@ -25,9 +26,9 @@ Description of the flower
 ## Findings
 
 ## References
-https://www.datacamp.com/community/tutorials/seaborn-python-tutorial
-https://en.wikipedia.org/wiki/Iris_flower_data_set
-https://www.math.umd.edu/~petersd/666/html/iris_pca.html
-https://www.kaggle.com/lalitharajesh/iris-dataset-exploratory-data-analysis
-http://archive.ics.uci.edu/ml/datasets/iris
-https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
+1. https://www.datacamp.com/community/tutorials/seaborn-python-tutorial
+2. https://en.wikipedia.org/wiki/Iris_flower_data_set
+3. https://www.math.umd.edu/~petersd/666/html/iris_pca.html
+4. https://www.kaggle.com/lalitharajesh/iris-dataset-exploratory-data-analysis
+5. http://archive.ics.uci.edu/ml/datasets/iris
+6. https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
