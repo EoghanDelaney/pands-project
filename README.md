@@ -15,7 +15,8 @@ The dataset consists of five number columns, four of which are dimensions (in ce
 ## Inital data review
 I order to review the data we first import it into python, we do this by applying the following code
 
-''' import pandas as pd     # We import pandas as pd to reduce the size of the code
+''' 
+    import pandas as pd     # We import pandas as pd to reduce the size of the code
     file = 'iris.csv'       # Declare a variable called file 
     df = pd.read_csv(file)  # We import the file and label it df
     df.head()               # This will output the top five rows of the above imported csv
