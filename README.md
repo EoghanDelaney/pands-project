@@ -4,7 +4,7 @@ This project contains research, analysis and conclusions drawn from the well-kno
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
 
 # Investigation
-Using Google a number of different iterations of the data set can found and the following CSV file was used in this project [CSV Files](http://archive.ics.uci.edu/ml/datasets/iris). As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image illustrating the sepal and petal element of the iris flower.
+Using Google a number of different iterations of the data set can found and the following CSV file was used in this project [CSV File](http://archive.ics.uci.edu/ml/datasets/iris). As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image illustrating the sepal and petal element of the iris flower.
 <p align="center">
     <img src='images/iris_with_labels.jpg'/>
 </p>
@@ -51,13 +51,10 @@ The final check in ipython we can carry out is to determine the quantity of uniq
     <img src='images/data_species_count.PNG'/>
 </p>
 
-Going foward we can now assume the dataset is complete and laid out as described in the introduction.
+Going foward we can now assume the dataset is complete and laid out as described in the introduction. The csv contains five number columns sepal_length, sepal_width, petal_length & petal_width wich are floats or decimal lengths in centimeters and finaly a species column. The dataset as beforementioned has 50 number of each species.
 
 ## Data caculations
 
-## How to run the code
-
-## What the files contain
 
 ## Data Visualization
 
