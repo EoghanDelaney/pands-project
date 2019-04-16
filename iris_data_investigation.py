@@ -21,6 +21,10 @@ def print_content():
     print(df[df.species == 'virginica'].describe())
 
 #################
+
+print("Setosa Sepal length:" + str(round(df[df.species == 'setosa'].std().sepal_length,3)))
+#################
+
 #def labelPlot(title):
    # heading = lm.fig.suptitle(title, fontsize=12)
   #  plt.show()
