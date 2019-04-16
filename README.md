@@ -70,17 +70,22 @@ This output has given a mean, standard deviation, max & min of sepal length, sep
 
 #### Versicolor
 <p align="center">
-    <img src='images/describe_Versicolor.PNG'/>
+    <img src='images/describe_versicolor.PNG'/>
 </p>
 
 #### Virginica
 <p align="center">
-    <img src='images/describe_Virginica.PNG'/>
+    <img src='images/describe_virginica.PNG'/>
 </p>
 
 From the above outputs we can create the following table to illustrate the data and group the relevant outputs together.
 
 ** Insert Table **
+
+|One |Two | Three |
+|----|----|-------|
+|test| rfgedf| Test|
+
 
 After reviewing the above table we can see that the mean of the petal length of the Setosa is significantly different to that of the other two species, similarly the petal width. The standard deviation of the Setosa’s petal length is also worth noting. This gives us an insight into the data however further investigation is required.
 
