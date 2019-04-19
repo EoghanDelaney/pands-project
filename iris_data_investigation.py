@@ -28,14 +28,14 @@ def print_content():
 
 def mean_std():
     print('************** Means for all Species ***********')
-    print("Setosa Mean: \n" + str(round(df[df.species == 'setosa'].mean(),3)))
-    print("Versicolor Mean: \n" + str(round(df[df.species == 'versicolor'].mean(),3)))
-    print("Virginica Mean: \n" + str(round(df[df.species == 'virginica'].mean(),3)))
+    print("*** Setosa Mean: \n" + str(round(df[df.species == 'setosa'].mean(),3)))
+    print("*** Versicolor Mean: \n" + str(round(df[df.species == 'versicolor'].mean(),3)))
+    print("*** Virginica Mean: \n" + str(round(df[df.species == 'virginica'].mean(),3)))
 
     print('************** Standard Devation for all Species ***********')
-    print("Setosa Std: \n" + str(round(df[df.species == 'setosa'].std(),3)))
-    print("Versicolor Std: \n" + str(round(df[df.species == 'versicolor'].std(),3)))
-    print("Virginica Std: \n" + str(round(df[df.species == 'virginica'].std(),3)))
+    print("*** Setosa Std: \n" + str(round(df[df.species == 'setosa'].std(),3)))
+    print("*** Versicolor Std: \n" + str(round(df[df.species == 'versicolor'].std(),3)))
+    print("*** Virginica Std: \n" + str(round(df[df.species == 'virginica'].std(),3)))
 
 
 # title = ('','Sepal Length','Sepal Width','Petal Length','Petal Width')
@@ -45,13 +45,15 @@ def mean_std():
 #################
 ### Box Plots entered Here####
 # Adapted from the attached https://stackoverflow.com/questions/52472757/creating-a-boxplot-facetgrid-in-seaborn-for-python
-fig, axes = plt.subplots(2, 2)
-axes = axes.flatten()
+def box_plot():
+    fig, axes = plt.subplots(2, 2)
+    axes = axes.flatten()
 
-ax = sns.boxplot(x="Species", y="sepal_length", data=df, orient='v', ax=axes[0])
-ax = sns.boxplot(x="Species", y="sepal_width", data=df, orient='v', ax=axes[1])
-ax = sns.boxplot(x="Species", y="petal_length", data=df, orient='v', ax=axes[2])
-ax = sns.boxplot(x="Species", y="petal_width", data=df, orient='v', ax=axes[3])
+    ax = sns.boxplot(x="species", y="sepal_length", data=df, orient='v', ax=axes[0])
+    ax = sns.boxplot(x="species", y="sepal_width", data=df, orient='v', ax=axes[1])
+    ax = sns.boxplot(x="species", y="petal_length", data=df, orient='v', ax=axes[2])
+    ax = sns.boxplot(x="species", y="petal_width", data=df, orient='v', ax=axes[3])
+    plt.show()
 
 #################
 
@@ -71,6 +73,17 @@ def sepalWidth():
     sns.swarmplot(x="species", y="sepal_width", data=df).set_title('Sepal Width')
     plt.show()
 
+def dot_plot ():
+    fig, axes = plt.subplots(2, 2)
+    axes = axes.flatten()
+    
+    ax = sns.swarmplot(x="species", y="petal_length", data=df, orient='v', ax=axes[0]).set_title('Petal Length')
+    ax = sns.swarmplot(x="species", y="petal_width", data=df, orient='v', ax=axes[1]).set_title('Petal Width')
+    ax = sns.swarmplot(x="species", y="sepal_length", data=df, orient='v', ax=axes[2]).set_title('Sepal Length')
+    ax = sns.swarmplot(x="species", y="sepal_width", data=df, orient='v', ax=axes[3]).set_title('Sepal Width')
+    
+    plt.show()
+
 ################
 
 def plotGraph():
@@ -86,18 +99,18 @@ def pet_width_length():
     plt.show()
 
 ###################
+# This can be save info into a CSV
+#df.describe().to_csv('test.csv', mode="a")
 
+###################
+mean_std()
+#print_content()
+#box_plot()
+#dot_plot()
+#petalLength()
+#petalWidth()
+#sepalLength()
+#sepalWidth()
 
-print_content()
-
-
-petalLength()
-petalWidth()
-sepalLength()
-sepalWidth()
-
-sep_width_length()
-pet_width_length()
-
-plotGraph()
+#plotGraph()
 

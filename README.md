@@ -3,7 +3,39 @@ This following project brief is to investigate the Fishers Iris dataset using py
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
 
-# Investigation
+# Table of Content
+
+1. [Run Code & Modules](#1.-Run-Code-&-Modules)
+2. [Investigation](#2.-Investigation)
+   
+    2.1 [Initial Data Investigation](##-2.1-Inital-data-review)
+    
+    2.2 [Data Calculations](##-2.2-Data-caculations)
+    
+    2.3 [Data Visualisation](##-2.3-Data-Visualization)
+3. [Findings](#-3.-Findings)
+4. [Potential Progression](#-4.-Potential-Progression)
+5. [Bibliography](#-5.-Bibliography)
+
+# 1. Run Code & Modules
+## How to download the code?
+
+
+
+
+## How to run the code?
+
+
+## Python modules
+#### Pandas
+
+#### Mathplotlib
+
+#### Seaborn
+
+#### Numpy
+
+# 2. Investigation
 Using Google a number of different iterations of the data set can found and the following CSV file was used in this project [CSV File](http://archive.ics.uci.edu/ml/datasets/iris). As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image illustrating the sepal and petal element of the iris flower.
 <p align="center">
     <img src='images/iris_with_labels.jpg'/>
@@ -12,7 +44,7 @@ https://www.math.umd.edu/~petersd/666/html/iris_pca.html
 
 The dataset consists of five number columns, four of which are dimensions (in centimetres) – Sepal Length, Sepal Width, Petal Length & Petal Width. The final column is the species of iris flower. There are 150 samples taken, 50 number for each species/class.
 
-## Inital data review
+## 2.1 Inital data review
 I order to review the data we first must import it using ipython, we do this by opening up the command line and initialising ipython and applying the following code
 ```python
     import pandas as pd     # We import pandas as pd to reduce the size of the code
@@ -23,7 +55,7 @@ I order to review the data we first must import it using ipython, we do this by 
 The above code can can provide us with a snipet of the data and provide the following output.
 
 <p align="center">
-    <img src='images/data_head.PNG'/>
+    <img src='images/describe/data_head.PNG'/>
 </p>
 
 Furthermore we can determine what type of values each column contains
@@ -34,7 +66,7 @@ Furthermore we can determine what type of values each column contains
 Getting the below output of floats and the species column is an object
 
 <p align="center">
-    <img src='images/data_types.PNG'/>
+    <img src='images/describe/data_types.PNG'/>
 </p>
 
 An other check we can carry out on the code is to determine if any of the samples are empty.
@@ -43,7 +75,7 @@ An other check we can carry out on the code is to determine if any of the sample
 ```
 The ouput is as follows
 <p align="center">
-    <img src='images/data_count.PNG'/>
+    <img src='images/describe/data_count.PNG'/>
 </p>
 
 The final check in ipython we can carry out is to determine the quantity of unique values in the 'species' column.
@@ -51,31 +83,31 @@ The final check in ipython we can carry out is to determine the quantity of uniq
     pd.value_counts(df['species'].values)  #This can determine the quantity of unique values of species
 ```
 <p align="center">
-    <img src='images/data_species_count.PNG'/>
+    <img src='images/describe/data_species_count.PNG'/>
 </p>
 
 Going foward we can now assume the dataset is complete and laid out as described in the introduction. The csv contains five number columns sepal_length, sepal_width, petal_length & petal_width wich are floats or decimal lengths in centimeters and finaly a species column. The dataset as beforementioned has 50 number of each species.
 
-## Data caculations
+## 2.2 Data caculations
 At this point we can now analyse the data further. We can use the describe function to demonstrate the means, standard deviation, Max and min of each of the columns. The following section of code is performed on the entire dataset.
 <p align="center">
-    <img src='images/describe_full_dataset.PNG'/>
+    <img src='images/describe/describe_full_dataset.PNG'/>
 </p>
 This output has given a mean, standard deviation, max & min of sepal length, sepal width, petal length & petal width. A mean sepal length of 5.84cm or standard deviation of 0.433cm for the sepal width. The table also shows the max and min of petal length and width 1cm, 6.9cm, 0.1cm & 2.5cm respectively. This information is useful if we are looking at the total dataset only however we want to drill down further into the dataset to view each species individually. We can apply the describe function for each species or class. The following code can achieve this.
 
 #### Setosa
 <p align="center">
-    <img src='images/describe_setosa.PNG'/>
+    <img src='images/describe/describe_setosa.PNG'/>
 </p>
 
 #### Versicolor
 <p align="center">
-    <img src='images/describe_versicolor.PNG'/>
+    <img src='images/describe/describe_versicolor.PNG'/>
 </p>
 
 #### Virginica
 <p align="center">
-    <img src='images/describe_virginica.PNG'/>
+    <img src='images/describe/describe_virginica.PNG'/>
 </p>
 
 From the above outputs we can create the following table to illustrate the data and group the relevant outputs together.
@@ -89,11 +121,16 @@ From the above outputs we can create the following table to illustrate the data 
 
 After reviewing the above table we can see that the mean of the petal length of the Setosa is significantly different to that of the other two species, similarly the petal width. The standard deviation of the Setosa’s petal length is also worth noting. This gives us an insight into the data however further investigation is required.
 
-## Data Visualization
+## 2.3 Data Visualization
 
-# Findings
+# 3. Findings
 
-# References
+
+
+# 4. Potential Progression
+
+
+# 5. Bibliography
 1. https://www.datacamp.com/community/tutorials/seaborn-python-tutorial
 2. https://en.wikipedia.org/wiki/Iris_flower_data_set
 3. https://www.math.umd.edu/~petersd/666/html/iris_pca.html
