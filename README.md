@@ -104,17 +104,17 @@ At this point we can now analyse the data further. We can use the describe funct
 </p>
 This output has given a mean, standard deviation, max & min of sepal length, sepal width, petal length & petal width. A mean sepal length of 5.84cm or standard deviation of 0.433cm for the sepal width. The table also shows the max and min of petal length and width 1cm, 6.9cm, 0.1cm & 2.5cm respectively. This information is useful if we are looking at the total dataset only however we want to drill down further into the dataset to view each species individually. We can apply the describe function for each species or class. The following code can achieve this.
 
-#### Setosa
+#### - Setosa
 <p align="center">
     <img src='images/describe/describe_setosa.PNG'/>
 </p>
 
-#### Versicolor
+#### - Versicolor
 <p align="center">
     <img src='images/describe/describe_versicolor.PNG'/>
 </p>
 
-#### Virginica
+#### - Virginica
 <p align="center">
     <img src='images/describe/describe_virginica.PNG'/>
 </p>
@@ -129,14 +129,14 @@ From the above outputs we can create the following table to illustrate the data 
 ```
 
 
-#### ***Table 1 - Means of all the species***
+#### ***Table 1 - Means of all the species (cm)***
 species     |  sepal_length  |  sepal_width  |  petal_length  |  petal_width
 ------------|---------------:|--------------:|---------------:|------------:
 setosa      |  5.006         |  3.418        |  1.464         |  0.244
 versicolor  |  5.936         |  2.77         |  4.26          |  1.326
 virginica   |  6.588         |  2.974        |  5.552         |  2.026
 
-#### ***Table 2 - Standard deviation of all the species***
+#### ***Table 2 - Standard deviation of all the species (cm)***
 species     |  sepal_length  |  sepal_width  |  petal_length  |  petal_width
 ------------|---------------:|--------------:|---------------:|------------:
 setosa      |  0.352         |  0.381        |  0.174         |  0.107
