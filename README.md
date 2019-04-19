@@ -3,7 +3,6 @@ This following project brief is to investigate the Fishers Iris dataset using py
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
 
-### Fisher's Paper
 
 
 # Table of Content
@@ -48,6 +47,9 @@ Using Google a number of different iterations of the data set can found and the 
 https://www.math.umd.edu/~petersd/666/html/iris_pca.html
 
 The dataset consists of five number columns, four of which are dimensions (in centimetres) – Sepal Length, Sepal Width, Petal Length & Petal Width. The final column is the species of iris flower. There are 150 samples taken, 50 number for each species/class.
+
+
+### Fisher's Paper
 
 ## 2.1 Inital data review
 I order to review the data we first must import it using ipython, we do this by opening up the command line and initialising ipython and applying the following code
@@ -150,11 +152,26 @@ In order to get a better understanding of the above we can plot the dataframe to
     <img src='images/graphs/4_dotplot_matrix.PNG'/>
 </p>
 
-The above graphs give us a visual depiction of what is shown in the tables and describe images in section 2.2. We can focus on graph number one Petal Length the setosa, according to the describe function has a mean petal length of 1.434cm with a standard deviation of 0.174. The max and min are 1.9cm & 1cm respectively and this is clearly shown on the graph.
+The above graphs give us a visual depiction of what is shown in the tables and ***describe()*** images in section 2.2. We can focus on graph number one, Petal Length the *Setosa* according to the describe function has a mean petal length of 1.434cm with a standard deviation of 0.174cm. The max and min are 1.9cm & 1cm respectively and this is clearly shown on the graph, as the range is between one and two. Using graph four Sepal width as the second example we can concentrate graph initaly - looking at Versiolor in orange we see the range between 2cm and 3.5cm however the group is weigthed more twards the 3cm mark. We can now look at the 
 # 3. Findings
 
+#### Dataset
 
+#### Insight into the Iris dataset
 
+#### Programming
+
+#### Key learnings
+ - __Ipython__ - 
+I used ipython as a key learning tool. Ipthyon enabled data manipulation at an instant level. I found type function **type()** powerful. Whenever I incountered any issue/error I i applied the type function and then inturn googles the outcome I was looking for. 
+
+ - __GitHub__ - Github and Markdown language was a key part of this project and this has given me a much stronger insight into how both work. I inclountered a number of errors and was able to solve them. After completing this project I fell allot more comfomratable using put Github and Mardown language.
+
+ - __Pandas__ - 
+ - __Seaborn__ -
+ - __Ski-learn__ -
+
+It is clear that with one google search a wealth of knowledge relating to the Fishers Iris dataset can be found. The key acumen from this assigement is how to approch a dataset without any prior knowledge of it. Firstly you must understand what and how the dataset is made up. This in turn can help you extract what you want from it.
 # 4. Potential Progression
 
 
