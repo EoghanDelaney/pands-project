@@ -5,17 +5,17 @@ The aim of this report is to determine if the physical characteristics of the ir
 
 # Table of Content
 
-1. [Run Code & Modules](#1.-Run-Code-&-Modules)
-2. [Investigation](#2.-Investigation)
+1. [Run Code & Modules](#1-Run-Code-&-Modules)
+2. [Investigation](#2-Investigation)
    
-    2.1 [Initial Data Investigation](##-2.1-Inital-data-review)
+    2.1 [Initial Data Investigation](##-21-Inital-data-review)
     
-    2.2 [Data Calculations](##-2.2-Data-caculations)
+    2.2 [Data Calculations](##-22-Data-caculations)
     
-    2.3 [Data Visualisation](##-2.3-Data-Visualization)
-3. [Findings](#-3.-Findings)
-4. [Potential Progression](#-4.-Potential-Progression)
-5. [Bibliography](#-5.-Bibliography)
+    2.3 [Data Visualisation](##-23-Data-Visualization)
+3. [Findings](#-3-Findings)
+4. [Potential Progression](#-4-Potential-Progression)
+5. [Bibliography](#-5-Bibliography)
 
 # 1. Run Code & Modules
 ## How to download the code?
