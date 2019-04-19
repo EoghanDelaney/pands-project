@@ -35,6 +35,8 @@ The aim of this report is to determine if the physical characteristics of the ir
 
 #### Numpy
 
+#### csvtomd
+
 # 2. Investigation
 Using Google a number of different iterations of the data set can found and the following CSV file was used in this project [CSV File](http://archive.ics.uci.edu/ml/datasets/iris). As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image illustrating the sepal and petal element of the iris flower.
 <p align="center">
@@ -112,12 +114,27 @@ This output has given a mean, standard deviation, max & min of sepal length, sep
 
 From the above outputs we can create the following table to illustrate the data and group the relevant outputs together.
 
-** Insert Table **
+```python
+    mean = round(df.groupby('species').mean(),3)    #Group all the species an output the mean
+    std = round(df.groupby('species').std(),3)      #Group all the species an output the standard deviation
+    mean.to_csv('csv/species_mean.csv')             #Output the mean to a csv
+    std.to_csv('csv/species_std.csv')               #Output the standard deviation to a csv
+```
 
-|One |Two | Three |
-|----|----|-------|
-|test| rfgedf| Test|
 
+#### ***Table 1 - Means of all the species***
+species     |  sepal_length  |  sepal_width  |  petal_length  |  petal_width
+------------|---------------:|--------------:|---------------:|------------:
+setosa      |  5.006         |  3.418        |  1.464         |  0.244
+versicolor  |  5.936         |  2.77         |  4.26          |  1.326
+virginica   |  6.588         |  2.974        |  5.552         |  2.026
+
+#### ***Table 2 - Standard deviation of all the species***
+species     |  sepal_length  |  sepal_width  |  petal_length  |  petal_width
+------------|---------------:|--------------:|---------------:|------------:
+setosa      |  0.352         |  0.381        |  0.174         |  0.107
+versicolor  |  0.516         |  0.314        |  0.47          |  0.198
+virginica   |  0.636         |  0.322        |  0.552         |  0.275
 
 After reviewing the above table we can see that the mean of the petal length of the Setosa is significantly different to that of the other two species, similarly the petal width. The standard deviation of the Setosa’s petal length is also worth noting. This gives us an insight into the data however further investigation is required.
 
@@ -137,3 +154,4 @@ After reviewing the above table we can see that the mean of the petal length of 
 4. https://www.kaggle.com/lalitharajesh/iris-dataset-exploratory-data-analysis
 5. http://archive.ics.uci.edu/ml/datasets/iris
 6. https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
+7. https://github.com/mplewis/csvtomd

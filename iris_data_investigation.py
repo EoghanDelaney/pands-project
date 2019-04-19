@@ -37,6 +37,11 @@ def mean_std():
     print("*** Versicolor Std: \n" + str(round(df[df.species == 'versicolor'].std(),3)))
     print("*** Virginica Std: \n" + str(round(df[df.species == 'virginica'].std(),3)))
 
+    mean = round(df.groupby('species').mean(),3)
+    std = round(df.groupby('species').std(),3)
+    mean.to_csv('csv/species_mean.csv', mode="a")
+    std.to_csv('csv/species_std.csv', mode="a")
+
 
 # title = ('','Sepal Length','Sepal Width','Petal Length','Petal Width')
 # list = round(df[df.species == 'virginica'].std(),3).tolist()
