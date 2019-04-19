@@ -4,15 +4,30 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 ## import numpy as np, pandas as pd, matplotlib.pyplot as plt, seaborn as sns
+## df = pd.read_csv('iris.csv')
 ## https://www.kaggle.com/mjbahmani/20-ml-algorithms-15-plot-for-beginners
 ## https://github.com/joeyajames/Python/blob/master/Pandas/pandas_weather.py
 
 file = 'iris.csv'
 df = pd.read_csv(file)
 
-def print_content():
-    print("***** Data Types *****")
+#################
+#################
+
+def review():
+    print('*******Data Types **********')
     print(df.dtypes)
+    print('*******Data Count **********')
+    print(df.count())
+    print('*******Null Values **********')
+    print(df.isnull().values.any())                # Adapted from https://stackoverflow.com/questions/29530232/how-to-check-if-any-value-is-nan-in-a-pandas-dataframe
+    print('*******Count Per Species **********')
+    print(pd.value_counts(df['species'].values))
+
+#################
+#################
+
+def describe():
     print("***** Data Total Describe *****")
     print(df.describe())
     print("***** Describe  Setosa *****")
@@ -22,8 +37,7 @@ def print_content():
     print("*****  Describe Virginica *****")
     print(df[df.species == 'virginica'].describe())
 
-
-#### Develope Table from above data
+#################
 #################
 
 def mean_std():
@@ -42,43 +56,11 @@ def mean_std():
     mean.to_csv('csv/species_mean.csv', mode="a")
     std.to_csv('csv/species_std.csv', mode="a")
 
-
-# title = ('','Sepal Length','Sepal Width','Petal Length','Petal Width')
-# list = round(df[df.species == 'virginica'].std(),3).tolist()
-
-# We can then append the above into a table
 #################
-### Box Plots entered Here####
+#################
+
 # Adapted from the attached https://stackoverflow.com/questions/52472757/creating-a-boxplot-facetgrid-in-seaborn-for-python
-def box_plot():
-    fig, axes = plt.subplots(2, 2)
-    axes = axes.flatten()
-
-    ax = sns.boxplot(x="species", y="sepal_length", data=df, orient='v', ax=axes[0])
-    ax = sns.boxplot(x="species", y="sepal_width", data=df, orient='v', ax=axes[1])
-    ax = sns.boxplot(x="species", y="petal_length", data=df, orient='v', ax=axes[2])
-    ax = sns.boxplot(x="species", y="petal_width", data=df, orient='v', ax=axes[3])
-    plt.show()
-
-#################
-
-def petalLength():
-    sns.swarmplot(x="species", y="petal_length", data=df).set_title('Petal Length')
-    plt.show()
-
-def petalWidth():
-    sns.swarmplot(x="species", y="petal_width", data=df).set_title('Petal Width')
-    plt.show()
-
-def sepalLength():
-    sns.swarmplot(x="species", y="sepal_length", data=df).set_title('Sepal Length')
-    plt.show()
-
-def sepalWidth():
-    sns.swarmplot(x="species", y="sepal_width", data=df).set_title('Sepal Width')
-    plt.show()
-
-def dot_plot ():
+def dot_plot_four_four():
     fig, axes = plt.subplots(2, 2)
     axes = axes.flatten()
     
@@ -89,9 +71,26 @@ def dot_plot ():
     
     plt.show()
 
+def dot_petalLength():
+    sns.swarmplot(x="species", y="petal_length", data=df).set_title('Petal Length')
+    plt.show()
+
+def dot_petalWidth():
+    sns.swarmplot(x="species", y="petal_width", data=df).set_title('Petal Width')
+    plt.show()
+
+def dot_sepalLength():
+    sns.swarmplot(x="species", y="sepal_length", data=df).set_title('Sepal Length')
+    plt.show()
+
+def dot_sepalWidth():
+    sns.swarmplot(x="species", y="sepal_width", data=df).set_title('Sepal Width')
+    plt.show()
+
+################
 ################
 
-def plotGraph():
+def plotGraphMatrix():
     sns.pairplot(df, hue='species').add_legend().fig.suptitle('Plot Matrix')
     plt.show()
 
@@ -104,18 +103,25 @@ def pet_width_length():
     plt.show()
 
 ###################
-# This can be save info into a CSV
-#df.describe().to_csv('test.csv', mode="a")
-
 ###################
-mean_std()
-#print_content()
-#box_plot()
-#dot_plot()
-#petalLength()
-#petalWidth()
-#sepalLength()
-#sepalWidth()
+#plotGraphMatrix()
 
-#plotGraph()
+def run_iris_investigation():
+    review()
+    describe()
 
+    mean_std()
+
+    dot_plot_four_four()
+    dot_petalLength()
+    dot_petalWidth()
+    dot_sepalLength()
+    dot_sepalWidth()
+
+    plotGraphMatrix()
+    sep_width_length()
+    pet_width_length()
+
+
+
+run_iris_investigation()

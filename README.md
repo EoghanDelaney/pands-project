@@ -3,6 +3,9 @@ This following project brief is to investigate the Fishers Iris dataset using py
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
 
+## Fisher's Paper
+
+
 # Table of Content
 
 1. [Run Code & Modules](#1-Run-Code-&-Modules)
@@ -21,19 +24,19 @@ The aim of this report is to determine if the physical characteristics of the ir
 ## How to download the code?
 
 
-
-
 ## How to run the code?
 
 
 ## Python modules
-#### Pandas
+#### Numpy
 
-#### Mathplotlib
+
+#### Pandas
+Pandas is a open source python library, for the preperation of data for data analysis. pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame throwout this investigation. Pandas sits atop **numpy** as a module and inherits some of its functions.  
 
 #### Seaborn
 
-#### Numpy
+#### Mathplotlib
 
 #### csvtomd
 
@@ -74,10 +77,12 @@ Getting the below output of floats and the species column is an object
 An other check we can carry out on the code is to determine if any of the samples are empty.
 ```python
     df.count # This line count the number of values in each of the columns
+    df.isnull().values.any() # To see if any values contain nothing
 ```
 The ouput is as follows
 <p align="center">
     <img src='images/describe/data_count.PNG'/>
+    <img src='images/describe/is_null.PNG'/>
 </p>
 
 The final check in ipython we can carry out is to determine the quantity of unique values in the 'species' column.
@@ -155,3 +160,4 @@ After reviewing the above table we can see that the mean of the petal length of 
 5. http://archive.ics.uci.edu/ml/datasets/iris
 6. https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
 7. https://github.com/mplewis/csvtomd
+8. https://pandas.pydata.org/
