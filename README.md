@@ -3,7 +3,7 @@ This following project brief is to investigate the Fishers Iris dataset using py
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
 
-## Fisher's Paper
+### Fisher's Paper
 
 
 # Table of Content
@@ -29,7 +29,7 @@ The aim of this report is to determine if the physical characteristics of the ir
 
 ## Python modules
 #### Numpy
-
+Numpy is a python package used for fast scientific computing.
 
 #### Pandas
 Pandas is a open source python library, for the preperation of data for data analysis. pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame throwout this investigation. Pandas sits atop **numpy** as a module and inherits some of its functions.  
@@ -141,10 +141,16 @@ setosa      |  0.352         |  0.381        |  0.174         |  0.107
 versicolor  |  0.516         |  0.314        |  0.47          |  0.198
 virginica   |  0.636         |  0.322        |  0.552         |  0.275
 
-After reviewing the above table we can see that the mean of the petal length of the Setosa is significantly different to that of the other two species, similarly the petal width. The standard deviation of the Setosa’s petal length is also worth noting. This gives us an insight into the data however further investigation is required.
+After reviewing the above table, Table 1, we can see that the mean of the petal length of the Setosa is significantly different to that of the other two species, similarly the petal width. The standard deviation (Table 2) of the Setosa’s petal length is also worth noting. This gives us an insight into the data however further investigation is required.
 
 ## 2.3 Data Visualization
+In order to get a better understanding of the above we can plot the dataframe to a graph. These graphs give use a visual representation of the data and how it acts. In order to view the data we plot all species in seprate on a Swarmplot from the seaborn library. A two by two graph each one showing Petal Length, Petal Width, Sepal Length & Sepal Width.
 
+<p align="center">
+    <img src='images/graphs/4_dotplot_matrix.PNG'/>
+</p>
+
+The above graphs give us a visual depiction of what is shown in the tables and describe images in section 2.2. We can focus on graph number one Petal Length the setosa, according to the describe function has a mean petal length of 1.434cm with a standard deviation of 0.174. The max and min are 1.9cm & 1cm respectively and this is clearly shown on the graph.
 # 3. Findings
 
 
