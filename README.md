@@ -148,12 +148,10 @@ After reviewing the above table, Table 1, we can see that the mean of the petal 
 ## 2.3 Data Visualization
 Histograms show ...
 <p align="center">
-    <img src='images/graphs/hist_pet_len.png'/>
-    <img src='images/graphs/hist_pet_wid.png'/>
+    <img src='images/graphs/hist_pet_len.png'/><img src='images/graphs/hist_pet_wid.png'/>
 </p>
 <p align="center">
-    <img src='images/graphs/hist_sep_len.png'/>
-    <img src='images/graphs/hist_sep_wid.png'/>
+    <img src='images/graphs/hist_sep_len.png'/><img src='images/graphs/hist_sep_wid.png'/>
 </p>
 In order to get a better understanding of the above we can plot the dataframe to a graph. These graphs give use a visual representation of the data and how it acts. In order to view the data we plot all species in seprate on a Swarmplot from the seaborn library. A two by two graph each one showing Petal Length, Petal Width, Sepal Length & Sepal Width.
 
