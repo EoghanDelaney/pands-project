@@ -146,6 +146,15 @@ virginica   |  0.636         |  0.322        |  0.552         |  0.275
 After reviewing the above table, Table 1, we can see that the mean of the petal length of the Setosa is significantly different to that of the other two species, similarly the petal width. The standard deviation (Table 2) of the Setosa’s petal length is also worth noting. This gives us an insight into the data however further investigation is required.
 
 ## 2.3 Data Visualization
+Histograms show ...
+<p align="center">
+    <img src='images/graphs/hist_pet_len.png'/>
+    <img src='images/graphs/hist_pet_wid.png'/>
+</p>
+<p align="center">
+    <img src='images/graphs/hist_sep_len.png'/>
+    <img src='images/graphs/hist_sep_wid.png'/>
+</p>
 In order to get a better understanding of the above we can plot the dataframe to a graph. These graphs give use a visual representation of the data and how it acts. In order to view the data we plot all species in seprate on a Swarmplot from the seaborn library. A two by two graph each one showing Petal Length, Petal Width, Sepal Length & Sepal Width.
 
 <p align="center">
@@ -184,3 +193,10 @@ It is clear that with one google search a wealth of knowledge relating to the Fi
 6. https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
 7. https://github.com/mplewis/csvtomd
 8. https://pandas.pydata.org/
+9. https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html
+10. https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.radviz.html
+11. https://github.com/pandas-dev/pandas/blob/v0.24.2/pandas/plotting/_misc.py#L146-L269
+12. https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.andrews_curves.html#pandas.plotting.andrews_curves
+13. https://en.wikipedia.org/wiki/Andrews_plot
+14. https://www.kaggle.com/mjbahmani/20-ml-algorithms-15-plot-for-beginners
+15. https://github.com/joeyajames/Python/blob/master/Pandas/pandas_weather.py
