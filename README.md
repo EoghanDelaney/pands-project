@@ -163,12 +163,14 @@ The above graphs give us a visual depiction of what is shown in the tables and *
 
 #### Radviz & Andrews Curves
 
-####**Radviz**
+#### Radviz
+
 <p align="center">
     <img src='images/graphs/rad_viz_plot.PNG'/>
 </p>
 
-##### **Andrews Curves**
+##### Andrews Curves
+
 <p align="center">
     <img src='images/graphs/andrews_curve.PNG'/>
 </p>
