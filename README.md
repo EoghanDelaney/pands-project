@@ -160,6 +160,19 @@ In order to get a better understanding of the above we can plot the dataframe to
 </p>
 
 The above graphs give us a visual depiction of what is shown in the tables and ***describe()*** images in section 2.2. We can focus on graph number one, Petal Length the *Setosa* according to the describe function has a mean petal length of 1.434cm with a standard deviation of 0.174cm. The max and min are 1.9cm & 1cm respectively and this is clearly shown on the graph, as the range is between one and two. Using graph four Sepal width as the second example we can concentrate graph initaly - looking at Versiolor in orange we see the range between 2cm and 3.5cm however the group is weigthed more twards the 3cm mark. We can now look at the 
+
+#### Radviz & Andrews Curves
+
+####**Radviz**
+<p align="center">
+    <img src='images/graphs/rad_viz_plot.PNG'/>
+</p>
+
+##### **Andrews Curves**
+<p align="center">
+    <img src='images/graphs/andrews_curve.PNG'/>
+</p>
+
 # 3. Findings
 
 #### Dataset
