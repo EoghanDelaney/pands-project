@@ -185,8 +185,4 @@ def run_iris_investigation():
     rad_viz()
     andreCurv()
 
-#run_iris_investigation()
-sepal_len_hist()
-sepal_wid_hist()
-petal_len_hist()
-petal_wid_hist()
+run_iris_investigation()
