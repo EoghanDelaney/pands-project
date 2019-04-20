@@ -1,6 +1,6 @@
 # Programming and Scripting GMIT 2019 - Pandas Project
 <p style ="float: right;">
-    <img src='images/gmit.jpg' width=40%/>
+    <img src='images/GMIT.jpg' width=40%/>
 </p>
 
 ### Student: Eoghan Delaney
