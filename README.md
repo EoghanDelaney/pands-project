@@ -1,8 +1,8 @@
 # Programming and Scripting GMIT 2019 - Pandas Project
 <p align="center">
     <img src='images/GMIT.jpg' width=40%/>
-    <h2>Student: Eoghan Delaney</h2>
-    <h2>Student Number: G00376462</h2>
+    <h2 align="center">Student: Eoghan Delaney</h2>
+    <h2 align="center">Student Number: G00376462</h2>
 </p>
 
 
