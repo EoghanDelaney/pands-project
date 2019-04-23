@@ -10,6 +10,16 @@ import seaborn as sns
 file = 'iris.csv'
 df = pd.read_csv(file)
 
+## Code introduction
+## I have broken all the elements into functions.
+## I have done this for two reasons 
+## 1. I feel it is more reflective of what is done in industry 
+## 2. When troubleshooting the code it is more straightforward to debug.
+## I could comment out the execution of that function leaving me with the remaining
+## function I was focusing on at the time.
+## I also feel its reads better and clearer to follow.
+
+
 #################
 #################
 ### Review the data 

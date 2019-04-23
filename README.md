@@ -14,11 +14,11 @@ This following project brief is to investigate the Fishers Iris dataset using py
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
 
-
+### Assignment Adgenda
 
 # Table of Content
 
-1. [Run Code & Modules](#1-Run-Code-&-Modules)
+1. [Run Code & Modules](#1-run-code--modules)
 2. [Investigation](#2-Investigation)
    
     2.1 [Initial Data Investigation](#21-inital-data-review)
@@ -94,6 +94,8 @@ The dataset consists of five number columns, four of which are dimensions (in ce
 
 
 ### Fisher's Paper
+
+
 
 ## 2.1 Inital data review
 I order to review the data we first must import it using ipython, we do this by opening up the command line and initialising ipython and applying the following code
@@ -309,6 +311,8 @@ I used ipython as a key learning tool. Ipthyon enabled data manipulation at an i
  - __Ski-learn__ -
 
 It is clear that with one google search a wealth of knowledge relating to the Fishers Iris dataset can be found. The key acumen from this assigement is how to approch a dataset without any prior knowledge of it. Firstly you must understand what and how the dataset is made up. This in turn can help you extract what you want from it.
+
+After completing this project I believe I have a much better understanding of to code along with the principles of programming. I had not prior knowledge of programming and found the module very informative. The assignment gave a good insight into how to investigate a dataset without any prior knowledge, what approach to take when analysing, a 
 # 4. Potential Progression
 
 
