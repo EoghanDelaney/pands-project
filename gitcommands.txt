@@ -1,0 +1,4 @@
+### This is just a reminder for myself for the commands
+### git add .
+### git commit -m "text"
+### git push -u origin master

@@ -32,23 +32,56 @@ The aim of this report is to determine if the physical characteristics of the ir
 
 # 1. Run Code & Modules
 ## How to download the code?
+There are two main ways in which we can download the repository/project folder. The command line and a direct download from the GITHUB repository page.
+
+**Option number 1 – Download using the command line**
+1.	Open the command line – seach cmd and press enter.
+2.	You must navigate to the desired download location using cd followed by the file path.
+3.	Once in the desired location, you can type the following command 
+    
+    $ git clone https://github.com/EoghanDelaney/pands-project
+4.	Once downloaded we can move into the folder showing all the files within.
+
+
+**Option number 2 – Download Zip**
+1.	The second option is to navigate to the following URL on your web browser. 
+    
+    https://github.com/EoghanDelaney/pands-project
+2.	Click the green button “Clone or Download” shown on the page.
+3.	Once clicked – a dropdown will appear now click “Download as Zip”.
+4.	Once the download is complete navigate to the download location you selected.
+5.	Unzip the file to proceed.
+6.	Once unzipped, open the folder to view the contents.
 
 
 ## How to run the code?
+Once the download is complete we can now run the python code. In order to do this we must have an up-to-date python 3 package installed, along with a number of essential python modules.
+Navigate to the www.python.org url and download the latest version of Python 3, by following the instructions on the website. Once complete open the command line, using the pip3 install command follow the below instructions.
+
+    • Pip3 install Numpy
+    • Pip3 install Pandas
+    • Pip3 install Seaborn
+    • Pip3 install Skit-learn
+
+These packages are used as part of the python script. Once complete navigate to the location where the python script is saved. To execute the script use the below command followed by enter.
+    
+    Python3 iris_data_investigation.py 
 
 
 ## Python modules
-#### Numpy
-Numpy is a python package used for fast scientific computing.
+___Numpy___ - Numpy is a python package used for fast scientific computing ***adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.*** [16]
 
-#### Pandas
-Pandas is a open source python library, for the preperation of data for data analysis. pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame throwout this investigation. Pandas sits atop **numpy** as a module and inherits some of its functions.  
+___Pandas___ - Pandas is an open source python library, for the preparation of data for data analysis. pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame, a type of data structure, throughout this investigation. Pandas provides easy-to-use functions that allows for reading from csv & slicing of data, to name a few. Pandas is a must when approaching any data analytics problem in python.
 
-#### Seaborn
+___csvtomd___ - Csvtomd is a small light weight open source package for converting CSV files into markdown format
 
-#### Mathplotlib
+___Mathplotlib___ - John Hunter was the mastermind behind the mathplotlib library. MAthplotlib is an open source python library for 2D plotting. ***“Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc., with just a few lines of code.”*** [17]
 
-#### csvtomd
+___Seaborn___ - Seaborn is a data visualisation tool for the python programming language. The package is used for data graphs, plot and charts. ***Seaborn provides a high-level interface for drawing attractive and informative statistical graphics.*** [18] Seaborn is based on the matplotlib library to generate powerful and attractive plots.
+
+
+
+
 
 # 2. Investigation
 Using Google a number of different iterations of the data set can found and the following CSV file was used in this project [CSV File](http://archive.ics.uci.edu/ml/datasets/iris). As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image illustrating the sepal and petal element of the iris flower.
@@ -182,7 +215,7 @@ We cab generate the histograms using the below code:
 <p align="center">
     <img src='images/graphs/hist_sep_len.png' width=45%/><img src='images/graphs/hist_sep_wid.png' width=45%/>
 </p>
-In order to get a better understanding of section 2.2 we can plot the dataframe to a graph. These graphs give use a visual representation of the data and how it acts. In order to view the data we plot all species in seprate on a Swarmplot from the seaborn library. A two by two graph each one showing Petal Length, Petal Width, Sepal Length & Sepal Width.
+In order to get a better understanding of section 2.2 we can plot the dataframe to a graph. These graphs give use a visual representation of the data and how it acts. In order to view the data we plot all species in seprate on a Swarmplot from the seaborn library. A two by two graph, each one showing Petal Length, Petal Width, Sepal Length & Sepal Width.
 
 <p align="center">
     <img src='images/graphs/4_dotplot_matrix.PNG'/>
@@ -207,15 +240,48 @@ In order to get a better understanding of section 2.2 we can plot the dataframe 
     plt.show()
 ```
 
-The above graphs give us a visual depiction of what is shown Table 1 & 2 and ***describe()*** images in section 2.2. We can focus on graph number one, Petal Length the *Setosa* according to the describe function has a mean petal length of 1.434cm with a standard deviation of 0.174cm. The max and min are 1.9cm & 1cm respectively and this is clearly shown on the graph, as the range is between one and two. Using graph four Sepal width as the second example we can concentrate graph initaly - looking at Versiolor in orange we see the range between 2cm and 3.5cm however the group is weigthed more twards the 3cm mark. We can now look at the 
+The above graphs give us a visual depiction of what is shown in Table 1 & 2 and ***describe()*** images in section 2.2. We can focus on graph number one, Petal Length the *Setosa*, according to the describe function has a mean petal length of 1.434cm with a standard deviation of 0.174cm. The max and min are 1.9cm & 1cm respectively and this is clearly shown on the graph, as the range is between one and two. Using graph four Sepal width as the second example we can concentrate on the graph initaly - looking at Versicolor in orange, we see the range between 2cm and 3.5cm however the group is weighted more towards 3cm. We can now look at Table 1 & 2, these values appear to be in line with the graph. The mean of the Versicolor is 2.77cm with a standard deviation of 0.314cm and this is in line with what we can see viualy on the graph. 
+
+We have viewed a number of examples to verify that the graph will represent what is shown in Section 2.2. This however can only illustrate a limited insights into the data. These are dimensions in isolation. The following Scatter Plots Matrix will plot all elements against one another, for example Sepal length Vs itself, Sepal length Vs Sepal Width, Sepal Length Vs Petal Width and Sepal Length Vs Petal Length. All possible combinations of plots will also be included in the matrix. However there will be a number of redundant plots - the inverses of an another. All plots will identify all species of Iris in different colours.
+
+```python
+    # Plot all of the dataframe "df" break it out per species
+    sns.pairplot(df, hue='species').add_legend().fig.suptitle('Plot Matrix')
+    plt.show()
+
+```
+
+### **Plot Matrix**
+
+<p align="center">
+    <img src='images/graphs/Graph_Matrix.png' width=90%/>
+</p>
+
+Looking at the above Matrix there are a number of graphs that enable us to further understand the data and how it reacts. This is different to the previous plots as the ratios of data differ, previously we looked at one dimension per species and attempted to determine notable differences between species. Using the matrix we can determine if any of the ratios create enough of a difference to stand out. If we look at graph below Sepal Length Vs Sepal Width.
+<p align="center">
+    <img src='images/graphs/graph_sepWvL.png' width=50%/>
+</p>
+The random distribuition of the dataset can only give us an inconclusive result. All species of Iris flowers have sepal widths bewteen the range of 2.5cm to 3.5cm, also all species have a sepel length of 4.5cm to circa 5.75cm. Therefore this graph is descriptive it is not gleening any tangable insights. If we take a look at the following graph Petal Length Vs Petal Width.
+
+<p align="center">
+    <img src='images/graphs/graph_petWvL.png' width=50%/>
+</p>
+
+The above is a very powerful graph taken from the plot matrix. As before mentioned the ratio of petal lngth to petal width can give us an insight into the data. The graph clearly shows setosa flower in blue on the bottom left hand corner of the graph. Any further Setosa measurement taken would be expected in this section of the graph. The versicolor and virginica are almost split into two separate groups, however there is small overlap. It would be fair to assume any larger measurments for both Petal width and length would be Virginica however this is not proven as there is outlyers in all dataset. The above can be assumed however there is no satistical significance.
+
 
 #### Radviz & Andrews Curves
 
 #### Radviz
+***Each Series in the DataFrame is represented as a evenly distributed slice on a circle. Each data point is rendered in the circle according to the value on each Series. Highly correlated Series in the DataFrame are placed closer on the unit circle.*** [19]
 
 <p align="center">
     <img src='images/graphs/rad_viz_plot.png'/>
 </p>
+
+The radviz plot shows multi-dimensional plot of all three species of Iris flower with all dimensions sepal width, length, petal width & length laid out in a circle. The setosa is shown in a cluster off centre while the versicolor and virginica are non-distinguishable, only for the colour difference. The plot demonstrates that the versioloar and virginca are highly correlated as they are heavily plotted in the one region and the setosa is clearly identified as weighted more towards the sepal width.  
+According to scikit-yb scientists use these plots to determine if there is separability between classes (Petal width, petal length, sepal width & sepal length) and this plots give a an opportunity to review the data in a different outlook.
+
 
 ##### Andrews Curves
 
@@ -226,6 +292,7 @@ The above graphs give us a visual depiction of what is shown Table 1 & 2 and ***
 # 3. Findings
 
 #### Dataset
+The aim of this investigation was to gain an insight into the structure and content of the Fisher Iris Flower Dataset, using python. Python can be used to determine many statistical factors
 
 #### Insight into the Iris dataset
 
@@ -237,7 +304,7 @@ I used ipython as a key learning tool. Ipthyon enabled data manipulation at an i
 
  - __GitHub__ - Github and Markdown language was a key part of this project and this has given me a much stronger insight into how both work. I inclountered a number of errors and was able to solve them. After completing this project I fell allot more comfomratable using put Github and Mardown language.
 
- - __Pandas__ - 
+ - __Pandas__ - Pandas is vital when exploring a new dataset. Pandas enables speeding 
  - __Seaborn__ -
  - __Ski-learn__ -
 
@@ -261,3 +328,10 @@ It is clear that with one google search a wealth of knowledge relating to the Fi
 13. https://en.wikipedia.org/wiki/Andrews_plot
 14. https://www.kaggle.com/mjbahmani/20-ml-algorithms-15-plot-for-beginners
 15. https://github.com/joeyajames/Python/blob/master/Pandas/pandas_weather.py
+16. https://en.wikipedia.org/wiki/NumPy
+17. https://matplotlib.org/
+18. https://seaborn.pydata.org/ 
+19. https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.radviz.html
+20. https://glowingpython.blogspot.com/2014/10/andrews-curves.html
+21. https://en.wikipedia.org/wiki/Andrews_plot
+
