@@ -1,8 +1,18 @@
 # Programming and Scripting GMIT 2019 - Pandas Project
+
+
 <p align="center">
     <img src='images/GMIT.jpg' width=40%/>
     <h3 align="center">Student: Eoghan Delaney</h3>
     <h3 align="center">Student Number: G00376462</h3>
+
+
+
+
+
+
+
+
 </p>
 
 
@@ -56,16 +66,16 @@ There are two main ways in which we can download the repository/project folder. 
 
 ## How to run the code?
 Once the download is complete we can now run the python code. In order to do this we must have an up-to-date python 3 package installed, along with a number of essential python modules.
-Navigate to the www.python.org url and download the latest version of Python 3, by following the instructions on the website. Once complete open the command line, using the pip3 install command follow the below instructions.
+Navigate to the www.python.org url and download the latest version of Python 3, by following the instructions on the website. Once complete open the command line, using the pip install command follow the below instructions.
 
-    • Pip3 install Numpy
-    • Pip3 install Pandas
-    • Pip3 install Seaborn
-    • Pip3 install Skit-learn
+    • Pip install Numpy
+    • Pip install Pandas
+    • Pip install Seaborn
+    • Pip install Skit-learn
 
 These packages are used as part of the python script. Once complete navigate to the location where the python script is saved. To execute the script use the below command followed by enter.
     
-    Python3 iris_data_investigation.py 
+    Python iris_data_investigation.py 
 
 
 ## Python modules
