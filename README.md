@@ -1,8 +1,8 @@
 # Programming and Scripting GMIT 2019 - Pandas Project
 <p align="center">
     <img src='images/GMIT.jpg' width=40%/>
-    <h2 align="center">Student: Eoghan Delaney</h2>
-    <h2 align="center">Student Number: G00376462</h2>
+    <h3 align="center">Student: Eoghan Delaney</h3>
+    <h3 align="center">Student Number: G00376462</h3>
 </p>
 
 
@@ -15,7 +15,6 @@ This following project brief is to investigate the Fishers Iris dataset using py
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
 
-### Assignment Adgenda
 
 # Table of Content
 
@@ -27,8 +26,8 @@ The aim of this report is to determine if the physical characteristics of the ir
     2.2 [Data Calculations](#22-data-caculations)
     
     2.3 [Data Visualisation](#23-data-visualization)
-3. [Findings](#3-findings)
-4. [Potential Progression](#4-potential-progression)
+3. [Potential Progression](#3-potential-progression)
+4. [Findings](#4-findings)
 5. [Bibliography](#5-bibliography)
 
 # 1. Run Code & Modules
@@ -70,15 +69,25 @@ These packages are used as part of the python script. Once complete navigate to 
 
 
 ## Python modules
-___Numpy___ - Numpy is a python package used for fast scientific computing ***adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.*** [16]
+___Numpy___ - 
 
-___Pandas___ - Pandas is an open source python library, for the preparation of data for data analysis. pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame, a type of data structure, throughout this investigation. Pandas provides easy-to-use functions that allows for reading from csv & slicing of data, to name a few. Pandas is a must when approaching any data analytics problem in python.
+Numpy is a python package used for fast scientific computing ***adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.*** [16]
 
-___csvtomd___ - Csvtomd is a small light weight open source package for converting CSV files into markdown format
+___Pandas___ - 
 
-___Mathplotlib___ - John Hunter was the mastermind behind the mathplotlib library. MAthplotlib is an open source python library for 2D plotting. ***“Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc., with just a few lines of code.”*** [17]
+Pandas is an open source python library, for the preparation of data for data analysis. pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame, a type of data structure, throughout this investigation. Pandas provides easy-to-use functions that allows for reading from csv & slicing of data, to name a few. Pandas is a must when approaching any data analytics problem in python.
 
-___Seaborn___ - Seaborn is a data visualisation tool for the python programming language. The package is used for data graphs, plot and charts. ***Seaborn provides a high-level interface for drawing attractive and informative statistical graphics.*** [18] Seaborn is based on the matplotlib library to generate powerful and attractive plots.
+___csvtomd___ - 
+
+Csvtomd is a small light weight open source package for converting CSV files into markdown format
+
+___Mathplotlib___ - 
+
+John Hunter was the mastermind behind the mathplotlib library. MAthplotlib is an open source python library for 2D plotting. ***“Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc., with just a few lines of code.”*** [17]
+
+___Seaborn___ - 
+
+Seaborn is a data visualisation tool for the python programming language. The package is used for data graphs, plot and charts. ***Seaborn provides a high-level interface for drawing attractive and informative statistical graphics.*** [18] Seaborn is based on the matplotlib library to generate powerful and attractive plots.
 
 
 
@@ -292,7 +301,9 @@ According to scikit-yb scientists use these plots to determine if there is separ
     <img src='images/graphs/andrews_curve.png'/>
 </p>
 
-# 3. Findings
+# 3. Potential Progression
+
+# 4. Findings
 
 #### Dataset
 The aim of this investigation was to gain an insight into the structure and content of the Fisher Iris Flower Dataset, using python. Python can be used to determine many statistical factors
@@ -313,8 +324,6 @@ I used ipython as a key learning tool. Ipthyon enabled data manipulation at an i
 
 It is clear that with one google search a wealth of knowledge relating to the Fishers Iris dataset can be found. The key acumen from this assigement is how to approch a dataset without any prior knowledge of it. Firstly you must understand what and how the dataset is made up. This in turn can help you extract what you want from it.
 
-After completing this project I believe I have a much better understanding of to code along with the principles of programming. I had not prior knowledge of programming and found the module very informative. The assignment gave a good insight into how to investigate a dataset without any prior knowledge, what approach to take when analysing, a 
-# 4. Potential Progression
 
 
 # 5. Bibliography
@@ -340,3 +349,6 @@ After completing this project I believe I have a much better understanding of to
 20. https://glowingpython.blogspot.com/2014/10/andrews-curves.html
 21. https://en.wikipedia.org/wiki/Andrews_plot
 
+# Notes
+
+After completing this project I believe I have a much better understanding of to code along with the principles of programming. I had not prior knowledge of programming and found the module very informative. The assignment gave a good insight into how to investigate a dataset without any prior knowledge, what approach to take when analysing,
