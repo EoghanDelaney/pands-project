@@ -1,9 +1,6 @@
-# Programming and Scripting 
-
-
 
 <p>
-    <h2 align="center">GMIT 2019 - Pandas Project</h2>
+    <h1 align="center">Programming and Scripting - Pandas Project</h1>
     <p align="center"><img align="center" src='images/GMIT.jpg' width=40%/></p>
     <h3 align="center">Student: Eoghan Delaney</h3>
     <h3 align="center">Student Number: G00376462</h3>
@@ -310,7 +307,13 @@ The function is shown below:
 where X1, X2, X3 and X4 represent the components of each of the samples taken, the sepal width, sepal length, petal length & petal width as laid out in the CSV file. t is taken as plus and minus Pi, therefor all samples are calculated from -3.14 to +3.14. The graph illustrates all 150 samples and demonstrates the pattern that it follows.
 
 # 3. Potential Progression/Machine Learning
-In this section we will look at how to predict the species of flower from patterns and trends in existing data. There are a number of machine learning algorithms which can achieve this, these algorithms are based on mathematical statistical models.
+In this section we will briefly look at how to predict the species of flower from patterns and trends in existing data. There are a number of machine learning algorithms which can achieve this, these algorithms are based on mathematical statistical models. Although these models are beyond the scope of this assignment, we will still review the outcome based on the assumption of them being correct.
+<p align="center" >
+    <img src='images/8-Machine-Learning-Algorithms-to-Learn.jpg'/ width=70%>
+</p>
+https://data-flair.training/blogs/machine-learning-algorithms-in-python/
+
+The above diagram gives a list of a number of python machine learning algorithms, some algorithms are more suited to  
 
 # 4. Findings
 

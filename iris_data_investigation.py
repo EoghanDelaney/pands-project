@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import sklearn
 
 ## I left the below there to copy and paste into ipython every time I returned to the project
 ## import numpy as np, pandas as pd, matplotlib.pyplot as plt, seaborn as sns
@@ -137,7 +138,7 @@ def dot_sepalWidth():
 
 ################
 ################
-### Generate a plot matrix from the data - all carictoristices vs one another
+### Generate a plot matrix from the data - all characteristics vs one another
 
 def plotGraphMatrix():
     sns.pairplot(df, hue='species').add_legend().fig.suptitle('Plot Matrix')
@@ -169,6 +170,75 @@ def andreCurv():
 
 ###################
 ###################
+### Machine Learning
+
+# Adapted from https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+from sklearn import model_selection
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
+
+
+def knear_neig():
+    # At this point we split out the data - Train and Test data.
+    X = df.values[:,0:4]    # X being the measurements we know
+    Y = df.values[:,4]      # Y being the species/target
+    
+    # X_train - Measurements to train the algorithm
+    # Y_train - Target to also train the algorithm
+    # X_validation - To test the measurements
+    # Y_validation - To test the target 
+    X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.20, random_state=7)
+    knc = KNeighborsClassifier(n_neighbors=3).fit(X_train, Y_train)
+    pred = knc.predict(X_validation)
+    test_table = pd.concat([X_validation, Y_validation, pd.Series(Y_validation, name='Predicted')], ignore_index=False, axis=1)
+    print(test_table)
+
+
+
+
+
+
+'''models = []
+models.append(('LR', LogisticRegression(solver='liblinear', multi_class='ovr')))
+models.append(('LDA', LinearDiscriminantAnalysis()))
+models.append(('KNN', KNeighborsClassifier()))
+models.append(('CART', DecisionTreeClassifier()))
+models.append(('NB', GaussianNB()))
+models.append(('SVM', SVC(gamma='auto')))
+# evaluate each model in turn
+results = []
+names = []
+for name, model in models:
+	kfold = model_selection.KFold(n_splits=10, random_state=seed)
+	cv_results = model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+	results.append(cv_results)
+	names.append(name)
+	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+	print(msg)
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###################
+###################
 ### Output all data and graphs
 
 def run_iris_investigation():
@@ -195,4 +265,5 @@ def run_iris_investigation():
     rad_viz()
     andreCurv()
 
-run_iris_investigation()
+#run_iris_investigation()
+knear_neig()
