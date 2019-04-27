@@ -25,7 +25,7 @@ The aim of this report is to determine if the physical characteristics of the ir
     2.2 [Data Calculations](#22-data-caculations)
     
     2.3 [Data Visualisation](#23-data-visualization)
-3. [Potential Progression](#3-potential-progression)
+3. [Potential Progression/Machine Learning](#3-potential-progression)
 4. [Findings](#4-findings)
 5. [Bibliography](#5-bibliography)
 
@@ -93,19 +93,19 @@ Seaborn is a data visualisation tool for the python programming language. The pa
 
 
 # 2. Investigation
-The first step is to determine what the iris data set is. As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image, taken from Math.umd.edu illustrating the sepal and petal part of the iris flower. The petal appears to be closer to the centre of the flower. The seapl is further down the stem of the plant.
+The first step is to determine what the iris data set is. As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image, taken from Math.umd.edu illustrating the sepal and petal part of the iris flower. The petal appears to be closer to the centre of the flower. The sepal is further down the stem of the plant.
 <p align="center">
     <img src='images/iris_with_labels.jpg'/>
 </p>
 https://www.math.umd.edu/~petersd/666/html/iris_pca.html
 
-From searching Google, a number of different iterations of the data set can found and the following CSV file was used in this project [CSV File](http://archive.ics.uci.edu/ml/datasets/iris). The dataset consists of five number columns, four of which are dimensions (in centimetres) – Sepal Length, Sepal Width, Petal Length & Petal Width. The final column is the species of iris flower. There are 150 samples taken, 50 number for each species/class.
+From searching Google, a number of different iterations of the data set can found and the following CSV file was used in this project [CSV File](http://archive.ics.uci.edu/ml/datasets/iris). The dataset consists of five number columns, four of which are dimensions (in centimeters) – Sepal Length, Sepal Width, Petal Length & Petal Width. The final column is the species of iris flower. There are 150 samples taken, 50 number for each species/class.
 
-This assignement will attempt to use statisical models to predict the species of the relevant plant.
+This assignment will attempt to use statistical models to predict the species of the relevant plant.
 
 
 ### Fisher's Paper
-Fisher's paper **"The use of multiple measurements in taxonomic problems"** - The paper uses a statistical approach to determine the differnences in the three species of Iris flower. Fisher explored *"what linear function of the four measurements will maximize the ratio of the difference between the specifc means to the standard deviations within the species?"*
+Fisher's paper **"The use of multiple measurements in taxonomic problems"** - The paper uses a statistical approach to determine the differences in the three species of Iris flower. Fisher explored *"what linear function of the four measurements will maximize the ratio of the difference between the specific means to the standard deviations within the species?"*
 
 Fisher concluded that *"a diagnosis of these two species (virginica & versicolor) could not be based solely on these four measurements (Sepal width, sepal length, petal width and petal length) of a single flower"*.
 
@@ -117,7 +117,7 @@ I order to review the data we first must import it using ipython, we do this by 
     df = pd.read_csv(file)  # We import the file and label it df
     df.head()               # This will output the top five rows of the above imported csv
 ```
-The above code can can provide us with a snipet of the data and provide the following output.
+The above code can can provide us with a snippet of the data and provide the following output.
 
 <p align="center">
     <img src='images/describe/data_head.PNG'/>
@@ -153,7 +153,7 @@ The final check in ipython we can carry out is to determine the quantity of uniq
     <img src='images/describe/data_species_count.PNG'/>
 </p>
 
-Going foward we can now assume the dataset is complete and laid out as described in the introduction. The csv contains five number columns sepal_length, sepal_width, petal_length & petal_width wich are floats or decimal lengths in centimeters and finaly a species column. The dataset as beforementioned has 50 number of each species.
+Going forward we can now assume the dataset is complete and laid out as described in the introduction. The csv contains five number columns sepal_length, sepal_width, petal_length & petal_width witch are floats or decimal lengths in centimeters and finally a species column. The dataset as aforementioned has 50 number of each species.
 
 ## 2.2 Data caculations
 At this point we can now analyse the data further. We can use the describe function to demonstrate the means, standard deviation, Max and min of each of the columns. The following section of code is performed on the entire dataset.
@@ -229,7 +229,7 @@ We cab generate the histograms using the below code:
 <p align="center">
     <img src='images/graphs/hist_sep_len.png' width=45%/><img src='images/graphs/hist_sep_wid.png' width=45%/>
 </p>
-In order to get a better understanding of section 2.2 we can plot the dataframe to a graph. These graphs give use a visual representation of the data and how it acts. In order to view the data we plot all species in seprate on a Swarmplot from the seaborn library. A two by two graph, each one showing Petal Length, Petal Width, Sepal Length & Sepal Width.
+In order to get a better understanding of section 2.2 we can plot the dataframe to a graph. These graphs give use a visual representation of the data and how it acts. In order to view the data we plot all species in separate on a Swarmplot from the seaborn library. A two by two graph, each one showing Petal Length, Petal Width, Sepal Length & Sepal Width.
 
 <p align="center">
     <img src='images/graphs/4_dotplot_matrix.PNG'/>
@@ -254,7 +254,7 @@ In order to get a better understanding of section 2.2 we can plot the dataframe 
     plt.show()
 ```
 
-The above graphs give us a visual depiction of what is shown in Table 1 & 2 and ***describe()*** images in section 2.2. We can focus on graph number one, Petal Length the *Setosa*, according to the describe function has a mean petal length of 1.434cm with a standard deviation of 0.174cm. The max and min are 1.9cm & 1cm respectively and this is clearly shown on the graph, as the range is between one and two. Using graph four Sepal width as the second example we can concentrate on the graph initaly - looking at Versicolor in orange, we see the range between 2cm and 3.5cm however the group is weighted more towards 3cm. We can now look at Table 1 & 2, these values appear to be in line with the graph. The mean of the Versicolor is 2.77cm with a standard deviation of 0.314cm and this is in line with what we can see viualy on the graph. 
+The above graphs give us a visual depiction of what is shown in Table 1 & 2 and ***describe()*** images in section 2.2. We can focus on graph number one, Petal Length the *Setosa*, according to the describe function has a mean petal length of 1.434cm with a standard deviation of 0.174cm. The max and min are 1.9cm & 1cm respectively and this is clearly shown on the graph, as the range is between one and two. Using graph four Sepal width as the second example we can concentrate on the graph initially - looking at Versicolor in orange, we see the range between 2cm and 3.5cm however the group is weighted more towards 3cm. We can now look at Table 1 & 2, these values appear to be in line with the graph. The mean of the Versicolor is 2.77cm with a standard deviation of 0.314cm and this is in line with what we can see visually on the graph. 
 
 We have viewed a number of examples to verify that the graph will represent what is shown in Section 2.2. This however can only illustrate a limited insights into the data. These are dimensions in isolation. The following Scatter Plots Matrix will plot all elements against one another, for example Sepal length Vs itself, Sepal length Vs Sepal Width, Sepal Length Vs Petal Width and Sepal Length Vs Petal Length. All possible combinations of plots will also be included in the matrix. However there will be a number of redundant plots - the inverses of an another. All plots will identify all species of Iris in different colours.
 
@@ -275,13 +275,13 @@ Looking at the above Matrix there are a number of graphs that enable us to furth
 <p align="center">
     <img src='images/graphs/graph_sepWvL.png' width=50%/>
 </p>
-The random distribuition of the dataset can only give us an inconclusive result. All species of Iris flowers have sepal widths bewteen the range of 2.5cm to 3.5cm, also all species have a sepel length of 4.5cm to circa 5.75cm. Therefore this graph is descriptive it is not gleening any tangable insights. If we take a look at the following graph Petal Length Vs Petal Width.
+The random distribution of the dataset can only give us an inconclusive result. All species of Iris flowers have sepal widths between the range of 2.5cm to 3.5cm, also all species have a sepal length of 4.5cm to circa 5.75cm. Therefore this graph is descriptive it is not gleaning any tangible insights. If we take a look at the following graph Petal Length Vs Petal Width.
 
 <p align="center">
     <img src='images/graphs/graph_petWvL.png' width=50%/>
 </p>
 
-The above is a very powerful graph taken from the plot matrix. As before mentioned the ratio of petal lngth to petal width can give us an insight into the data. The graph clearly shows setosa flower in blue on the bottom left hand corner of the graph. Any further Setosa measurement taken would be expected in this section of the graph. The versicolor and virginica are almost split into two separate groups, however there is small overlap. It would be fair to assume any larger measurments for both Petal width and length would be Virginica however this is not proven as there is outlyers in all dataset. The above can be assumed however there is no satistical significance.
+The above is a very powerful graph taken from the plot matrix. As before mentioned the ratio of petal length to petal width can give us an insight into the data. The graph clearly shows setosa flower in blue on the bottom left hand corner of the graph. Any further Setosa measurement taken would be expected in this section of the graph. The versicolor and virginica are almost split into two separate groups, however there is small overlap. It would be fair to assume any larger measurements for both Petal width and length would be Virginica however this is not proven as there is outliers in all dataset. The above can be assumed however there is no statistical significance.
 
 
 #### Radviz & Andrews Curves
@@ -298,12 +298,19 @@ According to scikit-yb scientists use these plots to determine if there is separ
 
 
 ##### Andrews Curves
-
+*"Andrews curves are a method for visualizing multidimensional data by mapping each observation onto a function."* (https://dzone.com/articles/andrews-curves)
+This functions allows the dataset to be plotted along side one another below is an example of the plot output with time t on the horizontal axis and x(t) on the vertical. 
 <p align="center">
     <img src='images/graphs/andrews_curve.png'/>
 </p>
+The function is shown below:
+<p align="center">
+    <img src='images/graphs/andrewscurve_formula.PNG'/>
+</p>
+where X1, X2, X3 and X4 represent the components of each of the samples taken, the sepal width, sepal length, petal length & petal width as laid out in the CSV file. t is taken as plus and minus Pi, therefor all samples are calculated from -3.14 to +3.14. The graph illustrates all 150 samples and demonstrates the pattern that it follows.
 
-# 3. Potential Progression
+# 3. Potential Progression/Machine Learning
+In this section we will look at how to predict the species of flower from patterns and trends in existing data. There are a number of machine learning algorithms which can achieve this, these algorithms are based on mathematical statistical models.
 
 # 4. Findings
 
@@ -316,15 +323,15 @@ The aim of this investigation was to gain an insight into the structure and cont
 
 #### Key learnings
  - __Ipython__ - 
-I used ipython as a key learning tool. Ipthyon enabled data manipulation at an instant level. I found type function **type()** powerful. Whenever I incountered any issue/error I i applied the type function and then inturn googles the outcome I was looking for. 
+I used ipython as a key learning tool. Ipthyon enabled data manipulation at an instant level. I found type function **type()** powerful. Whenever I encountered any issue/error I i applied the type function and then inturn googles the outcome I was looking for. 
 
- - __GitHub__ - Github and Markdown language was a key part of this project and this has given me a much stronger insight into how both work. I inclountered a number of errors and was able to solve them. After completing this project I fell allot more comfomratable using put Github and Mardown language.
+ - __GitHub__ - Github and Markdown language was a key part of this project and this has given me a much stronger insight into how both work. I encountered a number of errors and was able to solve them. After completing this project I fell allot more comfortable using put Github and Markdown language.
 
  - __Pandas__ - Pandas is vital when exploring a new dataset. Pandas enables speeding 
  - __Seaborn__ -
  - __Ski-learn__ -
 
-It is clear that with one google search a wealth of knowledge relating to the Fishers Iris dataset can be found. The key acumen from this assigement is how to approch a dataset without any prior knowledge of it. Firstly you must understand what and how the dataset is made up. This in turn can help you extract what you want from it.
+It is clear that with one google search a wealth of knowledge relating to the Fishers Iris dataset can be found. The key acumen from this assignment is how to approach a dataset without any prior knowledge of it. Firstly you must understand what and how the dataset is made up. This in turn can help you extract what you want from it.
 
 
 
@@ -351,6 +358,7 @@ It is clear that with one google search a wealth of knowledge relating to the Fi
 20. https://glowingpython.blogspot.com/2014/10/andrews-curves.html
 21. https://en.wikipedia.org/wiki/Andrews_plot
 22. THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS R. A. FISHER Sc.D., F.R.S.
+23. http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.608.6250&rep=rep1&type=pdf
 
 # Notes
 
