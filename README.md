@@ -1,30 +1,19 @@
-# Programming and Scripting GMIT 2019 - Pandas Project
+# Programming and Scripting 
 
 
-<p align="center">
-    <img src='images/GMIT.jpg' width=40%/>
+
+<p>
+    <h2 align="center">GMIT 2019 - Pandas Project</h2>
+    <p align="center"><img align="center" src='images/GMIT.jpg' width=40%/></p>
     <h3 align="center">Student: Eoghan Delaney</h3>
     <h3 align="center">Student Number: G00376462</h3>
-
-
-
-
-
-
-
-
 </p>
 
 
-
-
-
-
 # Introduction
-This following project brief is to investigate the Fishers Iris dataset using python.
+The following project brief was to investigate the Fishers Iris dataset using python.
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
-
 
 # Table of Content
 
@@ -42,10 +31,10 @@ The aim of this report is to determine if the physical characteristics of the ir
 
 # 1. Run Code & Modules
 ## How to download the code?
-There are two main ways in which we can download the repository/project folder. The command line and a direct download from the GITHUB repository page.
+There are two ways in which we can download the repository/project folder. The command line and a direct download from the GITHUB repository web page.
 
 **Option number 1 – Download using the command line**
-1.	Open the command line – seach cmd and press enter.
+1.	Open the command line – search cmd on the task bar and press enter.
 2.	You must navigate to the desired download location using cd followed by the file path.
 3.	Once in the desired location, you can type the following command 
     
@@ -54,26 +43,26 @@ There are two main ways in which we can download the repository/project folder. 
 
 
 **Option number 2 – Download Zip**
-1.	The second option is to navigate to the following URL on your web browser. 
+1.	The second option is to navigate to the following URL on your prefered web browser. 
     
     https://github.com/EoghanDelaney/pands-project
 2.	Click the green button “Clone or Download” shown on the page.
-3.	Once clicked – a dropdown will appear now click “Download as Zip”.
+3.	Once clicked – a dropdown will appear, now click “Download as Zip”.
 4.	Once the download is complete navigate to the download location you selected.
 5.	Unzip the file to proceed.
 6.	Once unzipped, open the folder to view the contents.
 
 
 ## How to run the code?
-Once the download is complete we can now run the python code. In order to do this we must have an up-to-date python 3 package installed, along with a number of essential python modules.
-Navigate to the www.python.org url and download the latest version of Python 3, by following the instructions on the website. Once complete open the command line, using the pip install command follow the below instructions.
+Once the download is complete we can now run the python code. In order to do this, we must have an up-to-date python 3 package installed, along with a number of essential python modules.
+Navigate to the www.python.org url and download the latest version of Python 3, by following the instructions on the website. Once complete open the command line, use the pip install command for the below modules.
 
     • Pip install Numpy
     • Pip install Pandas
     • Pip install Seaborn
     • Pip install Skit-learn
 
-These packages are used as part of the python script. Once complete navigate to the location where the python script is saved. To execute the script use the below command followed by enter.
+These packages are used as part of the python script. Once complete, navigate to the location where the python script is saved. To execute the script use the below command followed by enter.
     
     Python iris_data_investigation.py 
 
@@ -85,15 +74,15 @@ Numpy is a python package used for fast scientific computing ***adding support f
 
 ___Pandas___ - 
 
-Pandas is an open source python library, for the preparation of data for data analysis. pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame, a type of data structure, throughout this investigation. Pandas provides easy-to-use functions that allows for reading from csv & slicing of data, to name a few. Pandas is a must when approaching any data analytics problem in python.
+Pandas is an open source python library, for the preparation of data for data analysis. Pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame, a type of data structure, throughout this investigation. Pandas provides easy-to-use functions that allows for reading from csv & slicing of data, to name a few. Pandas is a must when approaching any data analytics problem in python.
 
 ___csvtomd___ - 
 
-Csvtomd is a small light weight open source package for converting CSV files into markdown format
+Csvtomd is a small light weight open source package for converting CSV files into markdown tables format.
 
 ___Mathplotlib___ - 
 
-John Hunter was the mastermind behind the mathplotlib library. MAthplotlib is an open source python library for 2D plotting. ***“Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc., with just a few lines of code.”*** [17]
+John Hunter was the mastermind behind the mathplotlib library. Mathplotlib is an open source python library for 2D plotting. ***“Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc., with just a few lines of code.”*** [17]
 
 ___Seaborn___ - 
 
@@ -104,18 +93,21 @@ Seaborn is a data visualisation tool for the python programming language. The pa
 
 
 # 2. Investigation
-Using Google a number of different iterations of the data set can found and the following CSV file was used in this project [CSV File](http://archive.ics.uci.edu/ml/datasets/iris). As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image illustrating the sepal and petal element of the iris flower.
+The first step is to determine what the iris data set is. As part of Fisher’s investigation he measured, documented and logged 150 Iris plants. Below is an image, taken from Math.umd.edu illustrating the sepal and petal part of the iris flower. The petal appears to be closer to the centre of the flower. The seapl is further down the stem of the plant.
 <p align="center">
     <img src='images/iris_with_labels.jpg'/>
 </p>
 https://www.math.umd.edu/~petersd/666/html/iris_pca.html
 
-The dataset consists of five number columns, four of which are dimensions (in centimetres) – Sepal Length, Sepal Width, Petal Length & Petal Width. The final column is the species of iris flower. There are 150 samples taken, 50 number for each species/class.
+From searching Google, a number of different iterations of the data set can found and the following CSV file was used in this project [CSV File](http://archive.ics.uci.edu/ml/datasets/iris). The dataset consists of five number columns, four of which are dimensions (in centimetres) – Sepal Length, Sepal Width, Petal Length & Petal Width. The final column is the species of iris flower. There are 150 samples taken, 50 number for each species/class.
+
+This assignement will attempt to use statisical models to predict the species of the relevant plant.
 
 
 ### Fisher's Paper
+Fisher's paper **"The use of multiple measurements in taxonomic problems"** - The paper uses a statistical approach to determine the differnences in the three species of Iris flower. Fisher explored *"what linear function of the four measurements will maximize the ratio of the difference between the specifc means to the standard deviations within the species?"*
 
-
+Fisher concluded that *"a diagnosis of these two species (virginica & versicolor) could not be based solely on these four measurements (Sepal width, sepal length, petal width and petal length) of a single flower"*.
 
 ## 2.1 Inital data review
 I order to review the data we first must import it using ipython, we do this by opening up the command line and initialising ipython and applying the following code
@@ -358,6 +350,7 @@ It is clear that with one google search a wealth of knowledge relating to the Fi
 19. https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.radviz.html
 20. https://glowingpython.blogspot.com/2014/10/andrews-curves.html
 21. https://en.wikipedia.org/wiki/Andrews_plot
+22. THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS R. A. FISHER Sc.D., F.R.S.
 
 # Notes
 
