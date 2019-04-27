@@ -197,8 +197,8 @@ def knear_neig():
     X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.20, random_state=7)
     knc = KNeighborsClassifier(n_neighbors=3).fit(X_train, Y_train)
     pred = knc.predict(X_validation)
-    test_table = pd.concat([X_validation, Y_validation, pd.Series(Y_validation, name='Predicted')], ignore_index=False, axis=1)
-    print(test_table)
+    tee = metrics.accuracy_score(Y_validation,pred)
+    print(tee)
 
 
 
