@@ -8,9 +8,9 @@
 
 
 # Introduction
-The project brief was to investigate the Fisher's Iris dataset using python.
+The project brief was to investigate the Fisher's Iris dataset using Python.
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s Iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
-The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
+The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the Python programming language.
 
 # Table of Content
 
@@ -52,14 +52,14 @@ There are two ways in which we can download the repository/project folder. The c
 
 ## How to run the code?
 Once the download is complete we can now run the Python code. In order to do this, we must have an up-to-date Python 3 package installed, along with a number of essential Python modules.
-Navigate to the www.python.org url and download the latest version of Python 3, by following the instructions on the website. Once complete open the command line, use the pip install command for the below modules.
+Navigate to the www.Python.org url and download the latest version of Python 3, by following the instructions on the website. Once complete open the command line, use the pip install command for the below modules.
 
     • Pip install Numpy
     • Pip install Pandas
     • Pip install Seaborn
     • Pip install Skit-learn
 
-These packages are used as part of the python script. Once complete, navigate to the location where the python script is saved. To execute the script use the below command followed by enter.
+These packages are used as part of the Python script. Once complete, navigate to the location where the Python script is saved. To execute the script use the below command followed by enter.
     
     Python iris_data_investigation.py 
 
@@ -67,27 +67,27 @@ These packages are used as part of the python script. Once complete, navigate to
 ## Python modules
 ___Numpy___ - 
 
-Numpy is a python package used for fast scientific computing ***adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.*** [16]
+Numpy is a Python package used for fast scientific computing ***adding support for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays.*** [16]
 
 ___Pandas___ - 
 
-Pandas is an open source python library, for the preparation of data for data analysis. Pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame, a type of data structure, throughout this investigation. Pandas provides easy-to-use functions that allows for reading from csv & slicing of data, to name a few. Pandas is a must when approaching any data analytics problem in python.
+Pandas is an open source Python library, for the preparation of data for data analysis. Pandas describes itself as a **"library providing high-performance, easy-to-use data structures and data analysis tools"** [8]. We use pandas as the data frame, a type of data structure, throughout this investigation. Pandas provides easy-to-use functions that allows for reading from CSV & slicing of data, to name a few. Pandas is a must when approaching any data analytics problem in Python.
 
-___csvtomd___ - 
+___CSVtomd___ - 
 
-Csvtomd is a small light-weight open source package for converting CSV files into markdown tables format.
+CSVtomd is a small light-weight open source package for converting CSV files into markdown tables format.
 
 ___Mathplotlib___ - 
 
-John Hunter was the mastermind behind the mathplotlib library. Mathplotlib is an open source python library for 2D plotting. ***“Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc., with just a few lines of code.”*** [17]
+John Hunter was the mastermind behind the mathplotlib library. Mathplotlib is an open source Python library for 2D plotting. ***“Matplotlib tries to make easy things easy and hard things possible. You can generate plots, histograms, power spectra, bar charts, errorcharts, scatterplots, etc., with just a few lines of code.”*** [17]
 
 ___Seaborn___ - 
 
-Seaborn is a data visualisation tool for the python programming language. The package is used for data graphs, plot and charts. ***Seaborn provides a high-level interface for drawing attractive and informative statistical graphics.*** [18] Seaborn is based on the matplotlib library to generate powerful and attractive plots.
+Seaborn is a data visualisation tool for the Python programming language. The package is used for data graphs, plot and charts. ***Seaborn provides a high-level interface for drawing attractive and informative statistical graphics.*** [18] Seaborn is based on the matplotlib library to generate powerful and attractive plots.
 
 
 ___Sklearn___ -
-Sklearn
+Sklearn is a machine learning library in the Python programming language. The module provides ***"simple and efficient tools for data mining and data analysis"***[24]. Sklearn is an extension of Numpy, SciPy and matplotlib and is built atop of all three. Sklearn is an increably powerful tool when used correctly
 
 
 # 2. Investigation
@@ -108,12 +108,12 @@ Fisher's paper **"The use of multiple measurements in taxonomic problems"** - Th
 Fisher concluded that *"a diagnosis of these two species (virginica & versicolor) could not be based solely on these four measurements (Sepal width, sepal length, petal width and petal length) of a single flower"*.
 
 ## 2.1 Initial data review
-In order to review the data we first must import it using ipython, we do this by opening up the command line and initialising ipython and applying the following code:
-```python
+In order to review the data we first must import it using iPython, we do this by opening up the command line and initialising iPython and applying the following code:
+```Python
     import pandas as pd     # We import pandas as pd to reduce the size of the code
     file = 'iris.csv'       # Declare a variable called file 
     df = pd.read_csv(file)  # We import the file and label it df
-    df.head()               # This will output the top five rows of the above imported csv
+    df.head()               # This will output the top five rows of the above imported CSV
 ```
 The above code can provide us with a snippet of the data and provide the following output:
 
@@ -122,7 +122,7 @@ The above code can provide us with a snippet of the data and provide the followi
 </p>
 
 Furthermore, we can determine what type of values each column contains:
-```python
+```Python
     # Following on from the code above
     df.dtypes
 ```
@@ -133,7 +133,7 @@ We get the below output of floats for all the dimensions and the species column 
 </p>
 
 Another check we can carry out on the code is to determine if any of the samples are empty:
-```python
+```Python
     df.count # This line counts the number of values in each of the columns
     df.isnull().values.any() # To see if any values contain nothing
 ```
@@ -143,15 +143,15 @@ The ouput is as follows:
     <img src='images/describe/is_null.PNG'/>
 </p>
 
-The final check in ipython we can carry out is to determine the quantity of unique values in the 'species' column:
-```python
+The final check in iPython we can carry out is to determine the quantity of unique values in the 'species' column:
+```Python
     pd.value_counts(df['species'].values)  #This can determine the quantity of unique values of species
 ```
 <p align="center">
     <img src='images/describe/data_species_count.PNG'/>
 </p>
 
-Going forward we can now assume the dataset is complete and laid out as described in the introduction. The csv contains five columns sepal_length, sepal_width, petal_length & petal_width, which are floats or decimal lengths in centimeters and finally a species column. The dataset as previously mentioned has 50 of each species.
+Going forward we can now assume the dataset is complete and laid out as described in the introduction. The CSV contains five columns sepal_length, sepal_width, petal_length & petal_width, which are floats or decimal lengths in centimeters and finally a species column. The dataset as previously mentioned has 50 of each species.
 
 ## 2.2 Data Calculations
 At this point, we can now analyse the data further. We can use the describe function to demonstrate the means, standard deviation, maximum and minimum of each of the columns. The following section of code is performed on the entire dataset:
@@ -159,6 +159,15 @@ At this point, we can now analyse the data further. We can use the describe func
     <img src='images/describe/describe_full_dataset.PNG'/>
 </p>
 This output has given a mean, standard deviation, maximum & minimum of sepal length, sepal width, petal length & petal width. A mean sepal length of 5.84cm or standard deviation of 0.433cm for the sepal width. The table also shows the maximum and minimum of petal length and width 1cm, 6.9cm, 0.1cm & 2.5cm respectively. This information is useful if we are looking at the total dataset only, however we want to drill down further into the dataset to view each species individually. We can apply the describe function for each species or class. The following code can achieve this:
+
+```python
+    print("***** Describe  Setosa *****")
+    print(df[df.species == 'setosa'].describe())
+    print("***** Describe Versicolor *****")
+    print(df[df.species == 'versicolor'].describe())
+    print("***** Describe Virginica *****")
+    print(df[df.species == 'virginica'].describe())
+```
 
 #### - Setosa
 <p align="center">
@@ -177,11 +186,11 @@ This output has given a mean, standard deviation, maximum & minimum of sepal len
 
 From the above outputs we can create the following table to illustrate the data and group the relevant outputs together:
 
-```python
+```Python
     mean = round(df.groupby('species').mean(),3)    # Group all the species and output the mean
     std = round(df.groupby('species').std(),3)      # Group all the species and output the standard deviation
-    mean.to_csv('csv/species_mean.csv')             # Output the mean to a csv
-    std.to_csv('csv/species_std.csv')               # Output the standard deviation to a csv
+    mean.to_CSV('CSV/species_mean.CSV')             # Output the mean to a CSV
+    std.to_CSV('CSV/species_std.CSV')               # Output the standard deviation to a CSV
 ```
 
 
@@ -206,7 +215,7 @@ In order to get a better understanding of section 2.2 we can plot the dataframe 
 
 A histogram can give a further insight into the data, the histogram or bar-chart, provides a count at each of the values for petal length & width, and the same for the sepal length and width. This also give us a visual of the spread of the values.
 We can generate the histograms using the below code:
-```python
+```Python
     # Below is a typical example used, the variables can be interchanged for a different outcome Sepal Width, Petal Length or Petal Width
     sns.distplot(df[df.species == 'setosa']['sepal_length']) 
     # Slice the dataset extracting all the Setosa values by the sepal length
@@ -237,7 +246,7 @@ To analyse the data further, we can plot all species on a Swarmplot from the sea
     <img src='images/graphs/4_dotplot_matrix.PNG'/>
 </p>
 
-```python
+```Python
 # The above is generated by the following code
     fig, axes = plt.subplots(2, 2) # Generate four graphs 2-by-2
     axes = axes.flatten()
@@ -260,7 +269,7 @@ The above graphs give us a visual depiction of what is shown in Table 1 & 2 and 
 
 We have viewed a number of examples to verify that the graph will represent what is shown in Section 2.2. This however can only give a limited insight into the data. These are dimensions in isolation. The following Scatter Plots Matrix will plot all elements against one another, for example Sepal length Vs itself, Sepal length Vs Sepal Width, Sepal Length Vs Petal Width, and Sepal Length Vs Petal Length. All possible combinations of plots will also be included in the matrix. However there will be a number of redundant plots - the inverses of an another. All plots will identify all species of Iris in different colours.
 
-```python
+```Python
     # Plot all of the dataframe "df" break it out per species
     sns.pairplot(df, hue='species').add_legend().fig.suptitle('Plot Matrix')
     plt.show()
@@ -316,12 +325,12 @@ In this section we will briefly look at how to predict the species of flower fro
 <p align="center" >
     <img src='images/8-Machine-Learning-Algorithms-to-Learn.jpg'/ width=70%>
 </p>
-https://data-flair.training/blogs/machine-learning-algorithms-in-python/
+https://data-flair.training/blogs/machine-learning-algorithms-in-Python/
 
-The above diagram gives a list of a number of python machine learning algorithms, some algorithms are more suited to different types of datasets. In this part of the assignment we will look at the four different algorithms and how they predict the species of plant. 
+The above diagram gives a list of a number of Python machine learning algorithms, some algorithms are more suited to different types of datasets. In this part of the assignment we will look at the four different algorithms and how they predict the species of plant. 
 
 The first step when approaching a machine learning problem, is we must have a learning dataset and a test dataset. This will allow the algorithm to scan through all the  data, viewing links/patterns that may not be visible to the user. The algorithm uses statistical models to approach this. Once the learning phase is complete the algorithm must then test the hypothesis it has created, using a test/validation set. This set will have a predetermined known outcome. The algorithm can then predict the outcome and test if it is correct. The below code will show how to split out the data, 80% (120 of the 150 samples) Test & 20% (30 of the 150 samples) Validation, into two groups test & validation:
-```python
+```Python
     # At this point we split out the data - Train and Test data.
     X = df.values[:,0:4]    # X being the measurements we know
     Y = df.values[:,4]      # Y being the species/target
@@ -334,7 +343,7 @@ The first step when approaching a machine learning problem, is we must have a le
     X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.20, random_state=7)
 ```
 Using the above, we can now use Sklearn to predict the 20% Validation using the below sample code. For this sample we used the K-nerist neigbour: 
-```python
+```Python
     # The below is the training phase
     knc = KNeighborsClassifier(n_neighbors=3).fit(X_train, Y_train)
     # Below uses the trained data to predict the Validation data
@@ -369,15 +378,15 @@ Some areas that may require further investigation may be the sample size, alteri
 # 4. Findings
 
 #### Dataset
-The aim of this investigation was to gain an insight into the structure and content of the Fisher Iris Flower Dataset, using python. Python can be used to determine many statistical factors.
+The aim of this investigation was to gain an insight into the structure and content of the Fisher Iris Flower Dataset, using Python. Python can be used to determine many statistical factors.
 
 #### Insight into the Iris dataset
 
 #### Programming
 
 #### Key learnings
- - __Ipython__ - 
-I used ipython as a key learning tool. Ipthyon enabled data manipulation at an instant level. I found type function **type()** powerful. Whenever I encountered any issue/error I applied the type function and then in turn Googled the outcome I was looking for. 
+ - __IPython__ - 
+I used iPython as a key learning tool. Ipthyon enabled data manipulation at an instant level. I found type function **type()** powerful. Whenever I encountered any issue/error I applied the type function and then in turn Googled the outcome I was looking for. 
 
  - __GitHub__ - Github and Markdown language was a key part of this project and this has given me a much stronger insight into how both work. I encountered a number of errors and was able to solve them. After completing this project I feel a lot more comfortable using Github and Markdown language.
 
@@ -392,13 +401,13 @@ It is clear that with one Google search a wealth of knowledge relating to the Fi
 
 
 # 5. Bibliography
-1. https://www.datacamp.com/community/tutorials/seaborn-python-tutorial
+1. https://www.datacamp.com/community/tutorials/seaborn-Python-tutorial
 2. https://en.wikipedia.org/wiki/Iris_flower_data_set
 3. https://www.math.umd.edu/~petersd/666/html/iris_pca.html
 4. https://www.kaggle.com/lalitharajesh/iris-dataset-exploratory-data-analysis
 5. http://archive.ics.uci.edu/ml/datasets/iris
 6. https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
-7. https://github.com/mplewis/csvtomd
+7. https://github.com/mplewis/CSVtomd
 8. https://pandas.pydata.org/
 9. https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html
 10. https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.radviz.html
@@ -411,10 +420,11 @@ It is clear that with one Google search a wealth of knowledge relating to the Fi
 17. https://matplotlib.org/
 18. https://seaborn.pydata.org/ 
 19. https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.plotting.radviz.html
-20. https://glowingpython.blogspot.com/2014/10/andrews-curves.html
+20. https://glowingPython.blogspot.com/2014/10/andrews-curves.html
 21. https://en.wikipedia.org/wiki/Andrews_plot
 22. THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS R. A. FISHER Sc.D., F.R.S.
 23. http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.608.6250&rep=rep1&type=pdf
+24. https://scikit-learn.org/stable/
 
 # Notes
 
