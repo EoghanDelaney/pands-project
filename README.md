@@ -17,9 +17,9 @@ The aim of this report is to determine if the physical characteristics of the ir
 1. [Run Code & Modules](#1-run-code--modules)
 2. [Investigation](#2-Investigation)
    
-    2.1 [Initial Data Investigation](#21-inital-data-review)
+    2.1 [Initial Data Investigation](#21-initial-data-review)
     
-    2.2 [Data Calculations](#22-data-caculations)
+    2.2 [Data Calculations](22-data-calculations)
     
     2.3 [Data Visualisation](#23-data-visualization)
 3. [Potential Progression/Machine Learning](#3-potential-progressionmachine-learning)
@@ -87,7 +87,7 @@ Seaborn is a data visualisation tool for the Python programming language. The pa
 
 
 ___Sklearn___ -
-Sklearn is a machine learning library in the Python programming language. The module provides ***"simple and efficient tools for data mining and data analysis"***[24]. Sklearn is an extension of Numpy, SciPy and matplotlib and is built atop of all three. Sklearn is an increably powerful tool when used correctly
+Sklearn is a machine learning library in the Python programming language. The module provides ***"simple and efficient tools for data mining and data analysis"***[24]. Sklearn is an extension of Numpy, SciPy and matplotlib and is built atop of all three. Sklearn is an increably powerful tool when used correctly.
 
 
 # 2. Investigation
@@ -378,13 +378,11 @@ Some areas that may require further investigation may be the sample size, alteri
 # 4. Findings
 
 #### Dataset
-The aim of this investigation was to gain an insight into the structure and content of the Fisher Iris Flower Dataset, using Python. Python can be used to determine many statistical factors.
+The aim of this investigation was to gain an insight into the structure and content of the Fisher Iris-flower Dataset, using Python. Fisher's Iris dataset is a very wellknown dataset well documented CSV, with unlimited resources for referral. Python can be used to determine many statistical factors of the dataset, from high-level means and standard deviations to predict, to a very high level of accuracy, what species of flower a sample is, based on its physical dimensions.
 
-#### Insight into the Iris dataset
+In this report we first analysed the dataset using iPython and the Pandas describe functions, we then explored the data using plots on histograms, dot plots and a plot matrices. All visual representations giving further insights into the data. The Radviz and Andrews curves were also reviewed and from every angle it was clear that the Setosa flower was different to those of the Virginica & Versicolor. The Petal of the Setosa was markedly different to that of the other two flowers. We then used Sklearn's built in statistical models, with varying degrees of accuracy, to determine the what species a plant was based on its physical dimensions. The outcome of the Linear Discriminant Analysis could determine what species a plant was, with 96.7% accuracy.
 
-#### Programming
-
-#### Key learnings
+#### Key Programming learnings
  - __IPython__ - 
 I used iPython as a key learning tool. Ipthyon enabled data manipulation at an instant level. I found type function **type()** powerful. Whenever I encountered any issue/error I applied the type function and then in turn Googled the outcome I was looking for. 
 
@@ -394,11 +392,9 @@ I used iPython as a key learning tool. Ipthyon enabled data manipulation at an i
  
  - __Seaborn__ - Seaborn is an incredibly powerful data visualization tool. Seaborn provides all shapes and types of graphs can be generated using this library, over the scope of this project seaborn was invaluable for plotting all the data. Going forward Seaborn is a must when analyzing data and trying to visualize and depict what it represents. 
  
- - __Ski-learn__ -
+ - __Ski-learn__ - I found the sklearn library to be incredibly powerful - I touched on statistics in a pervious college module and found it very interesting. This library has great potential, within this assignment we were able to predict the species of the plant, using built in algorithms within Sklearn.
 
 It is clear that with one Google search a wealth of knowledge relating to the Fisher's Iris dataset can be found. The key acumen from this assignment is how to approach a dataset without any prior knowledge of it. Firstly you must understand what and how the dataset is made up. This in turn can help you extract what you want from it. Python can provide additional insights that an off the shelf spreadsheet software can not, at a much faster pace.
-
-
 
 # 5. Bibliography
 1. https://www.datacamp.com/community/tutorials/seaborn-Python-tutorial
@@ -428,4 +424,4 @@ It is clear that with one Google search a wealth of knowledge relating to the Fi
 
 # Notes
 
-After completing this project I believe I have a much better understanding of how to code along with the principles of programming. I had no prior knowledge of programming and found the module very informative. The assignment gave a good insight into how to investigate a dataset without any prior knowledge, what approach to take when analyzing,
+After completing this project I believe I have a much better understanding of how to code along with the principles of programming. I had no prior knowledge of programming and found the module very informative. The assignment gave a good insight into how to investigate a dataset without any prior knowledge, what approach to take when analyzing and the principles used can be applied to any future project.
