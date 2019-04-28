@@ -8,7 +8,7 @@
 
 
 # Introduction
-The following project brief was to investigate the Fishers Iris dataset using python.
+The project brief was to investigate the Fishers Iris dataset using python.
 This project contains research, analysis and conclusions drawn from the well-known Fisher’s iris dataset. Ronald Fisher was a British biologist and statistician who documented physical characteristics of three varieties of iris flowers – Iris Setosa, Iris Virginica & Iris Versicolor. 
 The aim of this report is to determine if the physical characteristics of the iris flower can help determine the species of the plant, from the dataset using the python programming language.
 
@@ -22,7 +22,7 @@ The aim of this report is to determine if the physical characteristics of the ir
     2.2 [Data Calculations](#22-data-caculations)
     
     2.3 [Data Visualisation](#23-data-visualization)
-3. [Potential Progression/Machine Learning](#3-potential-progression)
+3. [Potential Progression/Machine Learning](#3-potential-progressionmachine-learning)
 4. [Findings](#4-findings)
 5. [Bibliography](#5-bibliography)
 
@@ -86,7 +86,8 @@ ___Seaborn___ -
 Seaborn is a data visualisation tool for the python programming language. The package is used for data graphs, plot and charts. ***Seaborn provides a high-level interface for drawing attractive and informative statistical graphics.*** [18] Seaborn is based on the matplotlib library to generate powerful and attractive plots.
 
 
-
+___Sklearn___ -
+Sklearn
 
 
 # 2. Investigation
@@ -226,6 +227,8 @@ We cab generate the histograms using the below code:
 <p align="center">
     <img src='images/graphs/hist_sep_len.png' width=45%/><img src='images/graphs/hist_sep_wid.png' width=45%/>
 </p>
+From the above graphs we can see that the petal length and width for the setosa stands out.
+
 In order to get a better understanding of section 2.2 we can plot the dataframe to a graph. These graphs give use a visual representation of the data and how it acts. In order to view the data we plot all species in separate on a Swarmplot from the seaborn library. A two by two graph, each one showing Petal Length, Petal Width, Sepal Length & Sepal Width.
 
 <p align="center">
@@ -377,10 +380,12 @@ I used ipython as a key learning tool. Ipthyon enabled data manipulation at an i
  - __GitHub__ - Github and Markdown language was a key part of this project and this has given me a much stronger insight into how both work. I encountered a number of errors and was able to solve them. After completing this project I fell allot more comfortable using put Github and Markdown language.
 
  - __Pandas__ - Pandas is vital when exploring a new dataset. Pandas enables speedy analysis the dataset.
- - __Seaborn__ -
+ 
+ - __Seaborn__ - Seaborn is an incredibly powerful data visualization tool. Seaborn provides all shapes and types of graphs can be generated using this library, over the scope of this project seaborn was invaluable for plotting all the data. Going forward seaborn is a must when analyzing data and trying to visualize and depict what it represents. 
+ 
  - __Ski-learn__ -
 
-It is clear that with one google search a wealth of knowledge relating to the Fishers Iris dataset can be found. The key acumen from this assignment is how to approach a dataset without any prior knowledge of it. Firstly you must understand what and how the dataset is made up. This in turn can help you extract what you want from it.
+It is clear that with one google search a wealth of knowledge relating to the Fishers Iris dataset can be found. The key acumen from this assignment is how to approach a dataset without any prior knowledge of it. Firstly you must understand what and how the dataset is made up. This in turn can help you extract what you want from it. Python can provide additional insights that an off the shelf spreadsheet software can not, at a much faster pace.
 
 
 
@@ -411,4 +416,4 @@ It is clear that with one google search a wealth of knowledge relating to the Fi
 
 # Notes
 
-After completing this project I believe I have a much better understanding of to code along with the principles of programming. I had not prior knowledge of programming and found the module very informative. The assignment gave a good insight into how to investigate a dataset without any prior knowledge, what approach to take when analysing,
+After completing this project I believe I have a much better understanding of to code along with the principles of programming. I had not prior knowledge of programming and found the module very informative. The assignment gave a good insight into how to investigate a dataset without any prior knowledge, what approach to take when analyzing,
