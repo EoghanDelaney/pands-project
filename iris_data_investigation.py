@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn
-from machine import knear_neig, reg_mod, lin_dis, gauss
+from machine import knear_neig, reg_mod, lin_dis, gauss # Machine is another script I have created to predict the species of a plant
 
 ## I left the below there to copy and paste into ipython every time I returned to the project
 ## import numpy as np, pandas as pd, matplotlib.pyplot as plt, seaborn as sns

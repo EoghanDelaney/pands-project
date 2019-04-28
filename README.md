@@ -313,7 +313,53 @@ In this section we will briefly look at how to predict the species of flower fro
 </p>
 https://data-flair.training/blogs/machine-learning-algorithms-in-python/
 
-The above diagram gives a list of a number of python machine learning algorithms, some algorithms are more suited to  
+The above diagram gives a list of a number of python machine learning algorithms, some algorithms are more suited to different types of datasets. In this part of the assignment we will lok at the four different algorithms and how they predict the species of plant. 
+
+The first step when approaching a machine learning problem, we must have a learning dataset and a test dataset. This will allow the algorithm to scan through all the  data, viewing links/patterns that may not be visible to the user. The algorithm uses statistical models to approach this. Once the learning phase is complete the algorithm must then test the hypothesis it has created using a test/validation set. This set will have a predetermined known outcome. The algorithm can then predict the outcome and test if it is correct. The below code will show how to split out the data, 80% (120 of the 150 samples) Test & 20% (30 of the 150 samples) Validation, into two groups test & validation:
+```python
+    # At this point we split out the data - Train and Test data.
+    X = df.values[:,0:4]    # X being the measurements we know
+    Y = df.values[:,4]      # Y being the species/target
+
+    # X_train - Measurements to train the algorithm
+    # Y_train - Target/Species, the desired outcome
+    # X_validation - To test the measurements
+    # Y_validation - To test the target 
+    # Important to note test_size =0.2 
+    X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.20, random_state=7)
+```
+Using the above, we can now use Sklearn to predict the 20% Validation using the below sample code. For this sample we used the K-nerist neigbour 
+```python
+    # The below is the training phase
+    knc = KNeighborsClassifier(n_neighbors=3).fit(X_train, Y_train)
+    # Below uses the trained data to predict the Validation data
+    pred = knc.predict(X_validation)
+
+```
+Using the above code, graph tool and the command line we were able to output the following insights from the data. We have a graph for each of the statistical algorithms showing the confusion matrix, this matrix shows the predicted label on the horizontal axis and the true value on the vertical. The confusion matrix is also shown on the command line on the screen shot to the right. 
+#### K-Nearest Neighbors
+<p align="center">
+    <img src='images/machine/knn.png' width=40%/><img src='images/machine/knn_cl.png' width=50%/>
+</p>
+
+#### Linear Discriminant Analysis
+<p align="center">
+    <img src='images/machine/lda.png' width=40%/><img src='images/machine/lda_cl.png' width=50%/>
+</p>
+
+#### Logisitic Regression
+<p align="center">
+    <img src='images/machine/log_reg.png' width=40%/><img src='images/machine/log_reg_cl.png' width=50%/>
+</p>
+
+#### Gaussian
+<p align="center">
+    <img src='images/machine/gaussian.png' width=40%/><img src='images/machine/gaussian_cl.png' width=50%/>
+</p>
+
+After reviewing all four samples it is clear that all tests were able to differentiate the setosa from the other two species. The level of accuracy therefore comes down to the differences between the Virginica and the Versicolor. Both the logistic regression and the gaussian were more inaccurate when trying to determine the species with a 80% and 83.3% score, respectively. The linear discriminant analysis was significantly more powerful when trying to validate the data with an accuracy of 96.7%, only one incorrect "guess" or prediction.
+
+Some areas that may require further investigation may be the sample size, altering this may yield different results. In addition to this using other statistical analysis may provide more accurate or relevant conclusions.
 
 # 4. Findings
 
@@ -330,7 +376,7 @@ I used ipython as a key learning tool. Ipthyon enabled data manipulation at an i
 
  - __GitHub__ - Github and Markdown language was a key part of this project and this has given me a much stronger insight into how both work. I encountered a number of errors and was able to solve them. After completing this project I fell allot more comfortable using put Github and Markdown language.
 
- - __Pandas__ - Pandas is vital when exploring a new dataset. Pandas enables speeding 
+ - __Pandas__ - Pandas is vital when exploring a new dataset. Pandas enables speedy analysis the dataset.
  - __Seaborn__ -
  - __Ski-learn__ -
 

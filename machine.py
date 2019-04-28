@@ -57,8 +57,10 @@ def knear_neig():
     pred = knc.predict(X_validation)
     plot_graph(name, pred)
     
-    print(metrics.accuracy_score(Y_validation,pred))
+    print('Accuracy score:' + str(metrics.accuracy_score(Y_validation,pred)))
+    print('**** Confusion Matrix ****')
     print(confusion_matrix(Y_validation,pred))
+    print('**** Classification Report ****')
     print(classification_report(Y_validation, pred))
 
 def reg_mod():
@@ -68,9 +70,11 @@ def reg_mod():
         
     pred = reg.predict(X_validation)
     plot_graph(name, pred)
-  
-    print(metrics.accuracy_score(Y_validation,pred))
+    
+    print('Accuracy score:' + str(metrics.accuracy_score(Y_validation,pred)))
+    print('**** Confusion Matrix ****')
     print(confusion_matrix(Y_validation,pred))
+    print('**** Classification Report ****')
     print(classification_report(Y_validation, pred))
 
 def lin_dis():
@@ -80,9 +84,11 @@ def lin_dis():
         
     pred = lnd.predict(X_validation)
     plot_graph(name, pred)
-
-    print(metrics.accuracy_score(Y_validation,pred))
+    
+    print('Accuracy score:' + str(metrics.accuracy_score(Y_validation,pred)))
+    print('**** Confusion Matrix ****')
     print(confusion_matrix(Y_validation,pred))
+    print('**** Classification Report ****')
     print(classification_report(Y_validation, pred))
 
 def gauss():
@@ -93,8 +99,10 @@ def gauss():
     pred = gaus.predict(X_validation)
     plot_graph(name, pred)
     
-    print(metrics.accuracy_score(Y_validation,pred))
+    print('Accuracy score:' + str(metrics.accuracy_score(Y_validation,pred)))
+    print('**** Confusion Matrix ****')
     print(confusion_matrix(Y_validation,pred))
+    print('**** Classification Report ****')
     print(classification_report(Y_validation, pred))
 
 knear_neig()
